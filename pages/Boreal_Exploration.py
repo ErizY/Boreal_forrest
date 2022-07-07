@@ -7,9 +7,10 @@ from PIL import Image
 import time
 from streamlit_folium import st_folium
 import folium
+from earth_observation_v1 import Fire
+from io import StringIO
+import json
 ee.Authenticate()
-
-
 
 
 st.set_page_config(
