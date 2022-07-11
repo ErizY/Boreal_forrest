@@ -19,6 +19,8 @@ st.set_page_config(
     layout="wide"
 )
 
+st.session_state["errors"] = []
+
 df = pd.read_csv("Data/wildfire_boreal_forest.csv")
 fires_choices = df["name"]
 layers_choices = {"True Color": "true", "False Color": "false",
@@ -37,7 +39,6 @@ st.markdown(
 layout1, layout2, layout3 = st.columns(3)
 fire = st.selectbox("Choose a fire", fires_choices)
 st.write("____________________")
-print(fire)
 start_date = str(st.date_input("Start Date",
                                min_value=datetime.date(2005, 1, 1),
                                max_value=datetime.date.today()))
@@ -84,27 +85,24 @@ if (pressed) and (True not in st.session_state["errors"]):
 
         if layer == "True Color":
             st.session_state["fire_object"].true_color(start_date=start_date,
-                                                       end_date=end_date, **params)
+                                                       end_date=end_date)
 
         elif layer == "False Color":
             st.session_state["fire_object"].false_color(
-                start_date=start_date, end_date=end_date, **params)
+                start_date=start_date, end_date=end_date)
 
         elif layer == "SWIR":
             st.session_state["fire_object"].swir(start_date=start_date,
-                                                 end_date=end_date, **params)
+                                                 end_date=end_date)
 
         elif layer == "NBR":
-            st.session_state["fire_object"].nbr(start_date=start_date, end_date=end_date, **{
-                key: value for key, value in params.items() if key == "cloudy_percentage"})
+            st.session_state["fire_object"].nbr(start_date=start_date, end_date=end_date)
 
         elif layer == "BAI":
-            st.session_state["fire_object"].bai(start_date=start_date, end_date=end_date, **{
-                key: value for key, value in params.items() if key == "cloudy_percentage"})
+            st.session_state["fire_object"].bai(start_date=start_date, end_date=end_date)
 
         elif layer == "EVI":
-            st.session_state["fire_object"].evi(start_date=start_date, end_date=end_date, **{
-                key: value for key, value in params.items() if key == "cloudy_percentage"})
+            st.session_state["fire_object"].evi(start_date=start_date, end_date=end_date)
 
         elif "Air Quality" in layer:
             st.session_state["fire_object"].air_quality(
