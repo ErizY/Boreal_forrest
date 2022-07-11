@@ -28,24 +28,6 @@ layers_choices = {"True Color": "true", "False Color": "false",
                   "LST": "lst"}
 
 
-def check_number(param):
-    if len(param) > 0 and (param.isnumeric() or isfloat(param)):
-        st.session_state["errors"].append(False)
-        return (True, param)
-    elif len(param) > 0:
-        st.markdown(
-            """<p class="small-font" style="color:red">
-                The value must be a number</p>""",
-            unsafe_allow_html=True,
-        )
-        st.session_state["errors"].append(True)
-        return (False, param)
-    else:
-        return (None, None)
-
-
-
-
 st.markdown(
     """<p style="color:#33ff33; font-size:50px; text-align:center">
             A Deeper Dive Into The Boreal Forrest</p>""",
@@ -55,7 +37,7 @@ st.markdown(
 layout1, layout2, layout3 = st.columns(3)
 fire = st.selectbox("Choose a fire", fires_choices)
 st.write("____________________")
-
+print(fire)
 start_date = str(st.date_input("Start Date",
                                min_value=datetime.date(2005, 1, 1),
                                max_value=datetime.date.today()))
@@ -83,7 +65,7 @@ st.write("____________________")
     # with st.expander("Parameters"):
 
 
-pressed = st.form_submit_button("Build Map")
+pressed = st.button("Build Map")
 
     # col1, col2 = st.columns([1.3, 1.4])
 
@@ -136,11 +118,11 @@ if (pressed) and (True not in st.session_state["errors"]):
         st.session_state["end_date"] = end_date
 
 if "fire_object" not in st.session_state:
-        Map = geemap.Map(Draw_export=True)
+        Map = geemap.Map()
         # Add a basemap
         # Map.add_basemap("ROADMAP")
         Map.to_streamlit(
-            width=st.session_state["width_slider"], height=st.session_state["height_slider"])
+            width=1500, height=700)
 else:
         st.session_state["fire_object"].Map.to_streamlit(
             width=st.session_state["width_slider"],
@@ -157,27 +139,7 @@ else:
 col1, col2 = st.columns(2)
 
 
-st_data = st_folium(m, width=725)
+# st_data = st_folium(m, width=725)
 if st.button("Continue to Boreal_Exploration Data exploration"):
     st.markdown('<meta http-equiv="refresh" content="0;url=/Boreal_Exploration_Continued">',
                 unsafe_allow_html=True)
-
-            
-col1, col2 = st.columns(2)
-
-width = col1.slider(
-            "Map width", key="width_slider", min_value=100, max_value=1500, step=50
-        )
-
-height = col2.slider(
-            "Map height", key="height_slider", min_value=100, max_value=1500, step=50
-        )
-
-st.button(
-            "Reset",
-            on_click=_update_slider,
-            kwargs={
-                "width_value": 1500,
-                "height_value": 700,
-            },
-        )
