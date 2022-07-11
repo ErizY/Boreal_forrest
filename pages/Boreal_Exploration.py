@@ -40,16 +40,18 @@ layout1, layout2, layout3 = st.columns(3)
 fire = st.selectbox("Choose a fire", fires_choices)
 st.write("____________________")
 start_date = str(st.date_input("Start Date",
-                               min_value=datetime.date(2005, 1, 1),
+                            value=datetime.datetime.strptime(df[df['name'] == fire]["date_start"].iloc[0], "%d/%m/%Y").date(),
+                               min_value=datetime.date(2000, 1, 1),
                                max_value=datetime.date.today()))
 
-end_date = str(st.date_input("End Date",
-                              min_value=datetime.date(2005, 1, 1),
-                              max_value=datetime.date.today()))
+end_date=str(st.date_input("End Date",
+                            value=datetime.datetime.strptime(df[df['name'] == fire]["date_end"].iloc[0], "%d/%m/%Y").date(),
+                              min_value = datetime.date(2000, 1, 1),
+                              max_value = datetime.date.today()))
 
 st.write("____________________")
 
-layer = st.selectbox("Choose a layer", layers_choices.keys())
+layer=st.selectbox("Choose a layer", layers_choices.keys())
 
    # if "Air Quality" in layer and pd.to_datetime(start_date) > pd.to_datetime('2017-11-13'):
    #     air_indice = st.selectbox("Choose an air quality indice", [
@@ -66,7 +68,7 @@ st.write("____________________")
     # with st.expander("Parameters"):
 
 
-pressed = st.button("Build Map")
+pressed=st.button("Build Map")
 
     # col1, col2 = st.columns([1.3, 1.4])
 
@@ -75,13 +77,13 @@ pressed = st.button("Build Map")
     # else:
     #     pressed = False
 
-    #col2.button('Confirm Selection')
+    # col2.button('Confirm Selection')
 
 st.write("")
 if (pressed) and (True not in st.session_state["errors"]):
 
-        fire_object = Fire(df.iloc[df[df['name'] == fire].index[0]])
-        st.session_state["fire_object"] = fire_object
+        fire_object=Fire(df.iloc[df[df['name'] == fire].index[0]])
+        st.session_state["fire_object"]=fire_object
 
         if layer == "True Color":
             st.session_state["fire_object"].true_color(start_date=start_date,
@@ -96,13 +98,16 @@ if (pressed) and (True not in st.session_state["errors"]):
                                                  end_date=end_date)
 
         elif layer == "NBR":
-            st.session_state["fire_object"].nbr(start_date=start_date, end_date=end_date)
+            st.session_state["fire_object"].nbr(
+                start_date=start_date, end_date=end_date)
 
         elif layer == "BAI":
-            st.session_state["fire_object"].bai(start_date=start_date, end_date=end_date)
+            st.session_state["fire_object"].bai(
+                start_date=start_date, end_date=end_date)
 
         elif layer == "EVI":
-            st.session_state["fire_object"].evi(start_date=start_date, end_date=end_date)
+            st.session_state["fire_object"].evi(
+                start_date=start_date, end_date=end_date)
 
         elif "Air Quality" in layer:
             st.session_state["fire_object"].air_quality(
@@ -112,19 +117,19 @@ if (pressed) and (True not in st.session_state["errors"]):
             st.session_state["fire_object"].lst(
                 start_date=start_date, end_date=end_date)
 
-        st.session_state["start_date"] = start_date
-        st.session_state["end_date"] = end_date
+        st.session_state["start_date"]=start_date
+        st.session_state["end_date"]=end_date
 
 if "fire_object" not in st.session_state:
-        Map = geemap.Map()
+        Map=geemap.Map()
         # Add a basemap
         # Map.add_basemap("ROADMAP")
         Map.to_streamlit(
             width=1500, height=700)
 else:
         st.session_state["fire_object"].Map.to_streamlit(
-            width=st.session_state["width_slider"],
-            height=st.session_state["height_slider"])
+            width=1500,
+            height=700)
 
         # print(st.session_state["fire_object"].Map.draw_features)
         # output = st_folium(st.session_state["fire_object"].Map, key="init",
@@ -134,7 +139,7 @@ else:
         # if output["last_active_drawing"]:
         #     st.session_state["last_active_drawing"] = output["last_active_drawing"]["geometry"]["coordinates"][0]
 
-col1, col2 = st.columns(2)
+col1, col2=st.columns(2)
 
 
 # st_data = st_folium(m, width=725)
