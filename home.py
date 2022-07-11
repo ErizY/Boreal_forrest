@@ -45,7 +45,7 @@ st.markdown(
 
 
 
-image = Image.open('images\placeholder-image.png')
+image = Image.open('images/placeholder-image.png')
 st.image(image, caption='The scale of the Boreal Forrest')
 
 st.markdown('This text is just to show the layout and how it would look on the actual system')

@@ -68,6 +68,7 @@ st.write("____________________")
     # with st.expander("Parameters"):
 
 
+
 pressed=st.button("Build Map")
 
     # col1, col2 = st.columns([1.3, 1.4])
@@ -141,8 +142,12 @@ else:
 
 col1, col2=st.columns(2)
 
+st.write(df[df["name"]==fire["description"]])
+
 
 # st_data = st_folium(m, width=725)
 if st.button("Continue to Boreal_Exploration Data exploration"):
     st.markdown('<meta http-equiv="refresh" content="0;url=/Boreal_Exploration_Continued">',
                 unsafe_allow_html=True)
+
+    
