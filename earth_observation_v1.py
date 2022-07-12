@@ -53,7 +53,10 @@ class Fire:
         self.gee_coordinates = fire.gee_coordinates
         self.map_coordinates = ast.literal_eval(fire.map_coordinates)
         self.crs = fire.crs
-        self.Map = geemap.Map(center=self.map_coordinates, zoom=9,Draw_export=True)
+        self.Map = geemap.Map(center=self.map_coordinates,
+                                zoom=9,
+                                Draw_export=False,
+                                plugin_Draw=False)
         self.S5_params = None
         self.imageCollection = None
         self.gamma = None

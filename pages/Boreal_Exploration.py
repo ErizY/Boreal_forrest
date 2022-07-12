@@ -139,7 +139,7 @@ if (pressed) and (True not in st.session_state["errors"]):
         st.session_state["end_date"]=end_date
 
 if "fire_object" not in st.session_state:
-        Map=geemap.Map()
+        Map=geemap.Map(plugin_Draw=False)
         # Add a basemap
         # Map.add_basemap("ROADMAP")
         Map.to_streamlit(
