@@ -19,11 +19,58 @@ AirQuality_monthspan = pd.read_csv('Data/filtered_df.csv')
 AirQuality_before_and_after = pd.read_csv('Data/beforeandafter_df.csv')
 AirQuality_yearSpan = pd.read_csv('Data/Year_spanDF.csv')
 
+st.session_state["errors"] = []
+
+df = pd.read_csv("Data/wildfire_boreal_forest.csv")
+fires_choices = df["name"]
+layers_choices = {"True Color": "true", "False Color": "false",
+                  "SWIR": "swir", "NBR": "nbr", "BAI": "bai",
+                  "EVI": "evi", "Air Quality (Nitrogen Dioxide)": "no2",
+                  "Air Quality (Carbon Monoxide)": "co",
+                  "LST": "lst"}
+
 st.markdown(
             """<p style="color:#33ff33; font-size:50px; text-align:center">
             The Boreal Forrest Exploration</p>""",
             unsafe_allow_html=True,
         )
+
+with st.sidebar:
+    fire = st.selectbox("Choose a fire", fires_choices)
+    st.session_state['fire_name'] = fire
+
+    st.write("____________________")
+    start_date = str(st.date_input("Start Date",
+                                value=datetime.datetime.strptime(df[df['name'] == fire]["date_start"].iloc[0], "%d/%m/%Y").date(),
+                                min_value=datetime.date(2000, 1, 1),
+                                max_value=datetime.date.today()))
+
+    end_date=str(st.date_input("End Date",
+                                value=datetime.datetime.strptime(df[df['name'] == fire]["date_end"].iloc[0], "%d/%m/%Y").date(),
+                                min_value = datetime.date(2000, 1, 1),
+                                max_value = datetime.date.today()))
+
+    st.write("____________________")
+
+    layer=st.selectbox("Choose a layer", layers_choices.keys())
+
+    # if "Air Quality" in layer and pd.to_datetime(start_date) > pd.to_datetime('2017-11-13'):
+    #     air_indice = st.selectbox("Choose an air quality indice", [
+    #                               "Carbon Monoxide", "Nitrogen Dioxide"])
+    if "Air Quality" in layer and pd.to_datetime(start_date) < pd.to_datetime('2017-11-13'):
+            st.markdown(
+                """<p class="small-font" style="color:red">
+                    Air Quality layer unavailable before 2017-11-13.</p>""",
+                unsafe_allow_html=True,
+            )
+            st.session_state["errors"].append(True)
+
+    st.write("____________________")
+        # with st.expander("Parameters"):
+
+    pressed=st.button("Build Map")
+
+
 graph_1, graph_2, graph_3 = st.columns(3)
 
 
