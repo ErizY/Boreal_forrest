@@ -12,14 +12,30 @@ from earth_observation_v1 import Fire
 from io import StringIO
 import json
 import numpy as np
-# ee.Authenticate()
-
 
 st.set_page_config(
     page_title="Page 2 ",
     page_icon="👋",
     layout="wide"
 )
+
+# Remove whitespace from the top of the page and sidebar
+st.markdown("""
+        <style>
+            .css-18e3th9 {
+                    padding-top: 3rem;
+                    padding-bottom: 10rem;
+                    padding-left: 5rem;
+                    padding-right: 5rem;
+                }
+            .css-1d391kg {
+                    padding-top: 3.5rem;
+                    padding-right: 1rem;
+                    padding-bottom: 3.5rem;
+                    padding-left: 1rem;
+                }
+        </style>
+        """, unsafe_allow_html=True)
 
 st.session_state["errors"] = []
 
@@ -38,51 +54,50 @@ st.markdown(
     unsafe_allow_html=True,
 )
 
-layout1, layout2, layout3 = st.columns(3)
-fire = st.selectbox("Choose a fire", fires_choices)
-st.write("____________________")
-start_date = str(st.date_input("Start Date",
-                            value=datetime.datetime.strptime(df[df['name'] == fire]["date_start"].iloc[0], "%d/%m/%Y").date(),
-                               min_value=datetime.date(2000, 1, 1),
-                               max_value=datetime.date.today()))
+with st.sidebar:
+    fire = st.selectbox("Choose a fire", fires_choices)
+    st.session_state['fire_name'] = fire
 
-end_date=str(st.date_input("End Date",
-                            value=datetime.datetime.strptime(df[df['name'] == fire]["date_end"].iloc[0], "%d/%m/%Y").date(),
-                              min_value = datetime.date(2000, 1, 1),
-                              max_value = datetime.date.today()))
+    st.write("____________________")
+    start_date = str(st.date_input("Start Date",
+                                value=datetime.datetime.strptime(df[df['name'] == fire]["date_start"].iloc[0], "%d/%m/%Y").date(),
+                                min_value=datetime.date(2000, 1, 1),
+                                max_value=datetime.date.today()))
 
-st.write("____________________")
+    end_date=str(st.date_input("End Date",
+                                value=datetime.datetime.strptime(df[df['name'] == fire]["date_end"].iloc[0], "%d/%m/%Y").date(),
+                                min_value = datetime.date(2000, 1, 1),
+                                max_value = datetime.date.today()))
 
-layer=st.selectbox("Choose a layer", layers_choices.keys())
+    st.write("____________________")
 
-   # if "Air Quality" in layer and pd.to_datetime(start_date) > pd.to_datetime('2017-11-13'):
-   #     air_indice = st.selectbox("Choose an air quality indice", [
-   #                               "Carbon Monoxide", "Nitrogen Dioxide"])
-if "Air Quality" in layer and pd.to_datetime(start_date) < pd.to_datetime('2017-11-13'):
+    layer=st.selectbox("Choose a layer", layers_choices.keys())
+
+    # if "Air Quality" in layer and pd.to_datetime(start_date) > pd.to_datetime('2017-11-13'):
+    #     air_indice = st.selectbox("Choose an air quality indice", [
+    #                               "Carbon Monoxide", "Nitrogen Dioxide"])
+    if "Air Quality" in layer and pd.to_datetime(start_date) < pd.to_datetime('2017-11-13'):
+            st.markdown(
+                """<p class="small-font" style="color:red">
+                    Air Quality layer unavailable before 2017-11-13.</p>""",
+                unsafe_allow_html=True,
+            )
+            st.session_state["errors"].append(True)
+
+    st.write("____________________")
+        # with st.expander("Parameters"):
+
+    pressed=st.button("Build Map")
+
+if "fire_name" in st.session_state:
+    description = str(df[df["name"]==st.session_state['fire_name']]["description"].iloc[0])
+    if description != "nan":
         st.markdown(
-            """<p class="small-font" style="color:red">
-                Air Quality layer unavailable before 2017-11-13.</p>""",
-            unsafe_allow_html=True,
-        )
-        st.session_state["errors"].append(True)
+                f"""<p class="small-font" style="text-align:center">
+                    {description}</p>""",
+                unsafe_allow_html=True,
+            )
 
-st.write("____________________")
-    # with st.expander("Parameters"):
-
-
-
-pressed=st.button("Build Map")
-
-    # col1, col2 = st.columns([1.3, 1.4])
-
-    # if col1.button('Build Map'):
-    #     pressed = True
-    # else:
-    #     pressed = False
-
-    # col2.button('Confirm Selection')
-
-st.write("")
 if (pressed) and (True not in st.session_state["errors"]):
 
         fire_object=Fire(df.iloc[df[df['name'] == fire].index[0]])
@@ -141,12 +156,6 @@ else:
 
         # if output["last_active_drawing"]:
         #     st.session_state["last_active_drawing"] = output["last_active_drawing"]["geometry"]["coordinates"][0]
-
-col1, col2=st.columns(2)
-
-description = str(df[df["name"]==fire]["description"].iloc[0])
-if description != "nan":
-    st.write(description)
 
 
 # st_data = st_folium(m, width=725)
