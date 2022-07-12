@@ -11,9 +11,27 @@ from streamlit_folium import st_folium
 import folium
 import os.path
 import pickle as pkle
-ee.Authenticate()
+# ee.Authenticate()
 
 st.set_page_config(layout="wide")
+
+# Remove whitespace from the top of the page and sidebar
+st.markdown("""
+        <style>
+            .css-18e3th9 {
+                    padding-top: 3rem;
+                    padding-bottom: 10rem;
+                    padding-left: 5rem;
+                    padding-right: 5rem;
+                }
+            .css-1d391kg {
+                    padding-top: 3.5rem;
+                    padding-right: 1rem;
+                    padding-bottom: 3.5rem;
+                    padding-left: 1rem;
+                }
+        </style>
+        """, unsafe_allow_html=True)
 
 AirQuality_monthspan = pd.read_csv('Data/filtered_df.csv')
 AirQuality_before_and_after = pd.read_csv('Data/beforeandafter_df.csv')
@@ -54,9 +72,6 @@ with st.sidebar:
 
     layer=st.selectbox("Choose a layer", layers_choices.keys())
 
-    # if "Air Quality" in layer and pd.to_datetime(start_date) > pd.to_datetime('2017-11-13'):
-    #     air_indice = st.selectbox("Choose an air quality indice", [
-    #                               "Carbon Monoxide", "Nitrogen Dioxide"])
     if "Air Quality" in layer and pd.to_datetime(start_date) < pd.to_datetime('2017-11-13'):
             st.markdown(
                 """<p class="small-font" style="color:red">
@@ -66,18 +81,18 @@ with st.sidebar:
             st.session_state["errors"].append(True)
 
     st.write("____________________")
-        # with st.expander("Parameters"):
 
     pressed=st.button("Build Map")
 
 
-graph_1, graph_2, graph_3 = st.columns(3)
-
+graph_1, map_1 = st.columns(2)
+graph_2, map_2 = st.columns(2)
 
 
 with graph_1:
 	line1 = px.line(AirQuality_monthspan, x='date', y=AirQuality_monthspan.columns[1:5])
 	st.write(line1)
+    
 
 with graph_2:
 	line2 = px.line(AirQuality_before_and_after, x='date', y=AirQuality_before_and_after.columns[1:5])
@@ -88,10 +103,16 @@ prev, _ ,next = st.columns([1, 10, 1])
 
 
 
-m = geemap.Map(location=[56.72769575738292, -111.3802457353699], zoom_start=10)
 
+with map_1:
+    m = geemap.Map(location=[56.72769575738292, -111.3802457353699], zoom_start=10)
+    m.to_streamlit(
+            width=1000, height=500)
 
-st_data = st_folium(m, width = 400)
+with map_2:
+    m = geemap.Map(location=[56.72769575738292, -111.3802457353699], zoom_start=10)
+    m.to_streamlit(
+            width=1000, height=500)
 
 
 
