@@ -142,7 +142,7 @@ else:
 
 col1, col2=st.columns(2)
 
-st.write(df[df["name"]==fire["description"]])
+st.write(df[df["name"]==fire]["description"].iloc[0])
 
 
 # st_data = st_folium(m, width=725)

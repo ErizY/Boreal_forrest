@@ -27,28 +27,20 @@ header = st.container()
 body = st.container()
 footer = st.container()
 
-
-
 st.markdown(
             """<p style="color:#33ff33; font-size:50px; text-align:center">
             The Boreal Forrest</p>""",
             unsafe_allow_html=True,
         )
+col1, col2, col3 = st.columns(3)
 
 
 
+with col2:
+    image = Image.open('images/placeholder-image.png')
+    st.image(image, caption='The scale of the Boreal Forrest')
 
-
-
-
-
-
-
-
-image = Image.open('images/placeholder-image.png')
-st.image(image, caption='The scale of the Boreal Forrest')
-
-st.markdown('This text is just to show the layout and how it would look on the actual system')
+    st.markdown('This text is just to show the layout and how it would look on the actual system')
 
 
 with st.expander("About"):
