@@ -37,7 +37,7 @@ with col2:
     st.markdown(
         'This text is just to show the layout and how it would look on the actual system')
 
-    st.expander("About"):
+    with st.expander("About"):
         st.write("""
             This website was created by Eriz Yusuf and Mohammed Mazy under Alan McFetrdige Photography, 
             The purpouse of this website..............
