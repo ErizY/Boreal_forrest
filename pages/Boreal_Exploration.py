@@ -1,5 +1,6 @@
 import geemap.foliumap as geemap
 import ee
+import numpy
 import streamlit as st
 import datetime
 import pandas as pd
@@ -10,7 +11,8 @@ import folium
 from earth_observation_v1 import Fire
 from io import StringIO
 import json
-ee.Authenticate()
+import numpy as np
+# ee.Authenticate()
 
 
 st.set_page_config(
@@ -142,7 +144,9 @@ else:
 
 col1, col2=st.columns(2)
 
-st.write(df[df["name"]==fire]["description"].iloc[0])
+description = str(df[df["name"]==fire]["description"].iloc[0])
+if description != "nan":
+    st.write(description)
 
 
 # st_data = st_folium(m, width=725)
