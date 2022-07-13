@@ -88,8 +88,11 @@ with st.sidebar:
 
 if (pressed) and (True not in st.session_state["errors"]):
 
-    fire_object = Fire(df.iloc[df[df['name'] == fire].index[0]])
-    st.session_state["fire_object"] = fire_object
+    fire_object_air = Fire(df.iloc[df[df['name'] == fire].index[0]])
+    st.session_state["fire_object_air"] = fire_object_air
+
+    fire_object_temp = Fire(df.iloc[df[df['name'] == fire].index[0]])
+    st.session_state["fire_object_temp"] = fire_object_temp
 
     if "Air Quality" in layer:
         st.session_state["fire_object_air"].air_quality(
@@ -106,13 +109,6 @@ graph_1, map_1 = st.columns(2)
 graph_2, map_2 = st.columns(2)
 
 if not st.session_state.keys() >= {"fire_object_air", "fire_object_temp"}:
-    # with graph_1:
-    #     line1 = px.line(AirQuality_monthspan, x='date', y=AirQuality_monthspan.columns[1:5])
-    #     st.write(line1)
-
-    # with graph_2:
-    #     line2 = px.line(AirQuality_before_and_after, x='date', y=AirQuality_before_and_after.columns[1:5])
-    #     st.write(line2)
 
     with graph_1:
         line1 = px.line().add_annotation(
@@ -152,9 +148,21 @@ if not st.session_state.keys() >= {"fire_object_air", "fire_object_temp"}:
         Map2.to_streamlit(
             width=1000, height=500)
 else:
-    st.session_state["fire_object"].Map.to_streamlit(
-        width=1500,
-        height=700)
+    with graph_1:
+        line1 = px.line(AirQuality_monthspan, x='date', y=AirQuality_monthspan.columns[1:5])
+        st.write(line1)
+
+    with graph_2:
+        line2 = px.line(AirQuality_before_and_after, x='date', y=AirQuality_before_and_after.columns[1:5])
+        st.write(line2)
+
+    with map_1:
+        st.session_state["fire_object_air"].Map.to_streamlit(
+            width=1000, height=500)
+
+    with map_2:
+        st.session_state["fire_object_temp"].Map.to_streamlit(
+            width=1000, height=500)
 
 
 prev, _, next = st.columns([1, 10, 1])
