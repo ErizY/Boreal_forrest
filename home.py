@@ -22,28 +22,42 @@ header = st.container()
 body = st.container()
 footer = st.container()
 
-st.markdown(
-    """<p style="color:#33ff33; font-size:50px; text-align:center">
-            The Boreal Forrest</p>""",
+st.markdown("""<h1 style="text-align: center; color:#33ff33; font-size:50px; ">The Boreal Forrest</h1>""",
     unsafe_allow_html=True,
 )
 col1, col2, col3 = st.columns(3)
 
 
 with col2:
-    image = Image.open('images/placeholder-image.png')
+    image = Image.open('images/Boreal.png')
     st.image(image, caption='The scale of the Boreal Forrest')
 
     st.markdown(
-        'This text is just to show the layout and how it would look on the actual system')
+        """
+        -The boreal forest is the worlds largest biome on planet earth! The forest zone consists of 8 countries: Canada,China,Finland,Japan,Russia,Norway,Sweden and the United States. It also coveres some costal areas of Iceland,areas of Northern Kazakhstan, Estonia and the Scottish Highlands
+            
+        -The Forrest covers 17 million square kilometers (6.6 million square miles) or 11.5% of the earths land
+
+        -The largest areas of the forest are in Canda and Russia
+
+        -The fire season in the Boreal forest typically lasts from May to October with peaks of activity between July and August
+        
+        
+        
+        
+        """)
 
     with st.expander("About"):
-        st.write("""
+        st.markdown("""
             This website was created by Eriz Yusuf and Mohammed Mazy under Alan McFetrdige Photography, 
-            The purpouse of this website..............
+            The purpose of this website is to Show the scale of the Boreal Forest and help users understand what happens in this particular biome, this website is an informative website that is used to inform users of fires happening in and around the Boreal. This is still a work in progress so some data may not be avaliable and some features may not work as expected
 
-            the data was taken from.............
-            the purpose of the data.........................
+            The data was taken from Various sources please see: [Boreal forest Fires](https://pastebin.com/1aHFFYy5)
+
+            Sattleite imagery was taken From Nasa and the European space agency using Google earth engine
+
+
+           
 
             """)
 button_1, button_2, button_3 = st.columns(3)
