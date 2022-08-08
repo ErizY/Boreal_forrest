@@ -172,7 +172,7 @@ button_1, button_2, button_3 = st.columns(3)
 
 
 with button_1:
-    if st.button("Back to Boreal_Exploration"):
+    if st.button("Back to Boreal Exploration"):
         st.markdown(
             '<meta http-equiv="refresh" content="0;url=/Boreal_Exploration">', unsafe_allow_html=True)
 
