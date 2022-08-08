@@ -40,6 +40,9 @@ st.markdown("""
 st.session_state["errors"] = []
 
 df = pd.read_csv("Data/wildfire_boreal_forest.csv")
+df = df[df['year']>2015].reset_index()
+df = df[df['gee_coordinates'].notnull()].reset_index()
+df = df.sort_values(by='name')
 fires_choices = df["name"]
 layers_choices = {"True Color": "true", "False Color": "false",
                   "SWIR": "swir", "NBR": "nbr", "BAI": "bai",
@@ -50,7 +53,7 @@ layers_choices = {"True Color": "true", "False Color": "false",
 
 st.markdown(
     """<p style="color:#33ff33; font-size:50px; text-align:center">
-            A Deeper Dive Into The Boreal Forrest</p>""",
+            A deeper dive into the Boreal Forest</p>""",
     unsafe_allow_html=True,
 )
 

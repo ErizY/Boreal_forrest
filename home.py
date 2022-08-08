@@ -22,7 +22,7 @@ header = st.container()
 body = st.container()
 footer = st.container()
 
-st.markdown("""<h1 style="text-align: center; color:#33ff33; font-size:50px; ">The Boreal Forrest</h1>""",
+st.markdown("""<h1 style="text-align: center; color:#33ff33; font-size:50px; ">The Boreal Forest</h1>""",
     unsafe_allow_html=True,
 )
 col1, col2, col3 = st.columns(3)
@@ -30,7 +30,7 @@ col1, col2, col3 = st.columns(3)
 
 with col2:
     image = Image.open('images/Boreal.png')
-    st.image(image, caption='The scale of the Boreal Forrest')
+    st.image(image, caption='The scale of the Boreal Forest')
 
     st.markdown(
         """
