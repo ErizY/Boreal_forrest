@@ -42,18 +42,18 @@ st.session_state["errors"] = []
 df = pd.read_csv("Data/wildfire_boreal_forest.csv")
 df = df[df['year']>2015].reset_index()
 df = df[df['gee_coordinates'].notnull()].reset_index()
-df = df.sort_values(by='name')
+df = df.sort_values(['name']).reset_index(drop=True)
+for col in df.columns:
+    df = df[~df[col].isin(['No Image Data Avaliable '])].reset_index(drop=True)
 fires_choices = df["name"]
-layers_choices = {"True Color": "true", "False Color": "false",
-                  "SWIR": "swir", "NBR": "nbr", "BAI": "bai",
-                  "EVI": "evi", "Air Quality (Nitrogen Dioxide)": "no2",
+layers_choices = {"True Color": "true", "Air Quality (Nitrogen Dioxide)": "no2",
                   "Air Quality (Carbon Monoxide)": "co",
                   "LST": "lst"}
 
 
 st.markdown(
     """<p style="color:#33ff33; font-size:50px; text-align:center">
-            A deeper dive into the Boreal Forest</p>""",
+            A deeper dive into the Boreal Forest Fires</p>""",
     unsafe_allow_html=True,
 )
 
@@ -92,14 +92,7 @@ with st.sidebar:
 
     pressed=st.button("Build Map")
 
-if "fire_name" in st.session_state:
-    description = str(df[df["name"]==st.session_state['fire_name']]["description"].iloc[0])
-    if description != "nan":
-        st.markdown(
-                f"""<p class="small-font" style="text-align:center">
-                    {description}</p>""",
-                unsafe_allow_html=True,
-            )
+
 
 if (pressed) and (True not in st.session_state["errors"]):
 
@@ -166,4 +159,20 @@ if st.button("Continue to Boreal_Exploration Data exploration"):
     st.markdown('<meta http-equiv="refresh" content="0;url=/Boreal_Exploration_Continued">',
                 unsafe_allow_html=True)
 
-    
+if "fire_name" in st.session_state:
+    description = str(df[df["name"]==st.session_state['fire_name']]["description"].iloc[0])
+    if description != "nan":
+        st.markdown(
+                f"""<p class="small-font" style="text-align:center">
+                    {description}</p>""",
+                unsafe_allow_html=True,
+            )   
+
+    if "fire_name" in st.session_state:
+        area_hectares = str(df[df["name"]==st.session_state['fire_name']]["area_hectares"].iloc[0])
+        if area_hectares != "nan":
+         st.markdown(
+                f"""<p class="small-font" style="text-align:center">
+                    {"Area Hectares burnt:" + area_hectares + "ha"}</p>""",
+                unsafe_allow_html=True,
+            )   
