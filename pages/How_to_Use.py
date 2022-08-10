@@ -29,13 +29,14 @@ toolbar = Image.open('images/Toolbar.png')
 graph1,text1 = st.columns(2)
 graph2,text2 = st.columns(2)
 with graph1:
-    st.markdown("<div style="text-align: center">
- Toolbar.png
-</div>")
+    for i in range(6):
+        st.write("")
+    
+    
+    st.markdown(f"""<div style="text-align: center"><img src="images/Toolbar.png" alt="toolbar" /></div>""", unsafe_allow_html=True)
     
 with text1:
     st.markdown("""
-
 	-Camera Icon: Clicking this icon allows you to download a PNG of the graph selected(***If you use this tool please creadit us!***)
 
 	-Magnifine glass: This tool allows you to select a specific area on the charts and zoom into it(**Note:** ***This only works on Bar charts and line graphs***)
@@ -44,8 +45,7 @@ with text1:
 
 	-Plus and Minus: This allows you to zoom in and out of the graph
 
-	-House: If you make a mistake or zoom in too far this tool allows you to reset axis to default
-	""")
+	-House: If you make a mistake or zoom in too far this tool allows you to reset axis to default""")
     
 
 
@@ -58,6 +58,10 @@ with graph2:
 
 with text2:
 
-    st.markdown("""Test each tool below to get a feel of how each tool works on the visulisation displayed""")
+    for i in range(12):
+        st.write("")
+    
+    st.markdown("""<div style="text-align: center">Test each tool below to get a feel of how each tool works on the visulisation displayed</div>""",
+    unsafe_allow_html=True)
 if st.button("Back to Home"):
         st.markdown('<meta http-equiv="refresh" content="0;url=/">', unsafe_allow_html=True)
