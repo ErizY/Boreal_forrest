@@ -23,18 +23,17 @@ st.markdown(
             How to use the website</p>""",
             unsafe_allow_html=True,
         )
-col1, col2,col3= st.columns((1,2,2))
-with col1:
-    Original = Image.open('images/Toolbar.png')
-    st.image(Original)
 
-
-
-
-with col2:
-
-    st.text('')
-
+st.markdown('***') 
+toolbar = Image.open('images/Toolbar.png')
+graph1,text1 = st.columns(2)
+graph2,text2 = st.columns(2)
+with graph1:
+    st.markdown("<div style="text-align: center">
+ Toolbar.png
+</div>")
+    
+with text1:
     st.markdown("""
 
 	-Camera Icon: Clicking this icon allows you to download a PNG of the graph selected(***If you use this tool please creadit us!***)
@@ -47,16 +46,18 @@ with col2:
 
 	-House: If you make a mistake or zoom in too far this tool allows you to reset axis to default
 	""")
-
-
-
     
 
 
 
-line1 = px.line(AirQuality_monthspan, x='date', y=AirQuality_monthspan.columns[1:5])
-st.write(line1)
-st.markdown("""Test each tool above to get a feel of how each tool works on the visulisation displayed""")
 
+with graph2:
+
+    line1 = px.line(AirQuality_monthspan, x='date', y=AirQuality_monthspan.columns[1:5])    
+    st.write(line1)
+
+with text2:
+
+    st.markdown("""Test each tool below to get a feel of how each tool works on the visulisation displayed""")
 if st.button("Back to Home"):
         st.markdown('<meta http-equiv="refresh" content="0;url=/">', unsafe_allow_html=True)

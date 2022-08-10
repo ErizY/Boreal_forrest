@@ -48,7 +48,7 @@ for col in df.columns:
 fires_choices = df["name"]
 layers_choices = {"True Color": "true", "Air Quality (Nitrogen Dioxide)": "no2",
                   "Air Quality (Carbon Monoxide)": "co",
-                  "LST": "lst"}
+                  "Land Surface Tempreature": "lst"}
 
 
 st.markdown(

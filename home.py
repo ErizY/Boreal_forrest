@@ -25,7 +25,7 @@ footer = st.container()
 st.markdown("""<h1 style="text-align: center; color:#33ff33; font-size:50px; ">The Boreal Forest</h1>""",
     unsafe_allow_html=True,
 )
-col1, col2, col3 = st.columns(3)
+col1, col2, col3 = st.columns([10,30,10])
 
 
 with col2:
