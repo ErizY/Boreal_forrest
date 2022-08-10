@@ -33,7 +33,7 @@ with graph1:
         st.write("")
     
     
-    st.markdown(f"""<div style="text-align: center"><img src="images/Toolbar.png" alt="toolbar" /></div>""", unsafe_allow_html=True)
+    st.markdown(f"""<div style="text-align: center"><img src="/eo-website/images/Toolbar.png" alt="Toolbar" /></div>""", unsafe_allow_html=True)
     
 with text1:
     st.markdown("""
