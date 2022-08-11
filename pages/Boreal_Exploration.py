@@ -53,8 +53,8 @@ layers_choices = {"True Color": "true", "Air Quality (Nitrogen Dioxide)": "no2",
 
 
 components.html(
-    """<p style="color:#33ff33; font-size:50px; text-align:center">
-            Visualising Boreal Fires</p>"""
+    """<h1 style="color:#33ff33; font-size:50px; text-align:center">
+            Visualising Boreal Fires</h1>"""
 )
 
 with st.sidebar:
