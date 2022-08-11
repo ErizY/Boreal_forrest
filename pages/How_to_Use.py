@@ -6,6 +6,8 @@ import pandas as pd
 from PIL import Image
 import time
 import plotly.express as px
+import base64 
+import streamlit.components.v1 as components
 
 st.set_page_config(
     page_title="How to Use",
@@ -18,22 +20,28 @@ AirQuality_yearSpan = pd.read_csv('Data/Year_spanDF.csv')
 
 
  
-st.markdown(
-            """<p style="color:#33ff33; font-size:50px;text-align:center">
-            How to use the website</p>""",
-            unsafe_allow_html=True,
+components.html(
+            """<h1 style="color:#33ff33; font-size:50px;text-align:center">
+            How to use the Tool</h1>"""
         )
+
+components.html("""<p style="color:#ffff; text-align:center; font-family: Arial; ">This is our first proof of concept prototype and is still in development. If you have any feedback, thoughts, bugs email us at studio@alan-mcfetridge.com and we'd be happy to help!.</p>
+</p>
+""")
+
+
 
 st.markdown('***') 
 toolbar = Image.open('images/Toolbar.png')
 graph1,text1 = st.columns(2)
 graph2,text2 = st.columns(2)
+graph3,text3 = st.columns(2)
 with graph1:
     for i in range(6):
         st.write("")
     
-    
-    st.markdown(f"""<div style="text-align: center"><img src="/eo-website/images/Toolbar.png" alt="Toolbar" /></div>""", unsafe_allow_html=True)
+    image = Image.open('images/Toolbar.png')
+    st.image(image, caption=None, width=1000, use_column_width=500, clamp=False, channels="RGB", output_format="auto")
     
 with text1:
     st.markdown("""
@@ -53,15 +61,22 @@ with text1:
 
 with graph2:
 
-    line1 = px.line(AirQuality_monthspan, x='date', y=AirQuality_monthspan.columns[1:5])    
+    line1 = px.line(AirQuality_monthspan, x='date', y=AirQuality_monthspan.columns[1:5])
     st.write(line1)
+    st.caption("This Graph shows the Air quality levels From Fort Mcmurray in the month of May 2016, Carbon Monoxide,Particulate matter and Nitrogen Dioxide")    
 
 with text2:
 
     for i in range(12):
         st.write("")
     
-    st.markdown("""<div style="text-align: center">Test each tool below to get a feel of how each tool works on the visulisation displayed</div>""",
+    st.markdown("""<div style="text-align: center">Test each tool on the graph to get a feel of how each tool works on the visulisation displayed</div>""",
     unsafe_allow_html=True)
+
+video_file = open('images/tool_working.mp4','rb')
+video_bytes = video_file.read()
+st.video(video_bytes)
+st.caption("Here is an example of how the tool works, In this example you can see me selecting a fire from the dataset, changing the layer to LST which is land surface tempreature and also selecting a date range, Air quality only works from data from 2017 onwards")
 if st.button("Back to Home"):
-        st.markdown('<meta http-equiv="refresh" content="0;url=/">', unsafe_allow_html=True)
+    st.markdown('<meta http-equiv="refresh" content="0;url=/home">',
+                unsafe_allow_html=True)

@@ -12,6 +12,7 @@ from earth_observation_v1 import Fire
 from io import StringIO
 import json
 import numpy as np
+import streamlit.components.v1 as components
 
 st.set_page_config(
     page_title="Page 2 ",
@@ -51,13 +52,16 @@ layers_choices = {"True Color": "true", "Air Quality (Nitrogen Dioxide)": "no2",
                   "LST": "lst"}
 
 
-st.markdown(
+components.html(
     """<p style="color:#33ff33; font-size:50px; text-align:center">
-            A deeper dive into the Boreal Forest Fires</p>""",
-    unsafe_allow_html=True,
+            Visualising Boreal Fires</p>"""
 )
 
 with st.sidebar:
+    components.html(
+    """<p style="color:#33ff33; font-size:40px; text-align:center">
+            Explore available satellite datasets</p>""")
+
     fire = st.selectbox("Choose a fire", fires_choices)
     st.session_state['fire_name'] = fire
 
@@ -155,9 +159,7 @@ else:
 
 
 # st_data = st_folium(m, width=725)
-if st.button("Continue to Boreal_Exploration Data exploration"):
-    st.markdown('<meta http-equiv="refresh" content="0;url=/Boreal_Exploration_Continued">',
-                unsafe_allow_html=True)
+
 
 if "fire_name" in st.session_state:
     description = str(df[df["name"]==st.session_state['fire_name']]["description"].iloc[0])
@@ -176,3 +178,10 @@ if "fire_name" in st.session_state:
                     {"Area Hectares burnt:" + area_hectares + "ha"}</p>""",
                 unsafe_allow_html=True,
             )   
+
+if st.button("Continue to how to use"):
+    st.markdown('<meta http-equiv="refresh" content="0;url=/How_to_Use">',
+                unsafe_allow_html=True)
+if st.button("Back to Home"):
+    st.markdown('<meta http-equiv="refresh" content="0;url=/home">',
+                unsafe_allow_html=True)
