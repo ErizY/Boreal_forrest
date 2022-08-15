@@ -8,7 +8,6 @@ import time
 import os.path
 import pickle as pkle
 import streamlit.components.v1 as components
-
 st.set_page_config(
     page_title="HOME",
     page_icon="	🏠",
