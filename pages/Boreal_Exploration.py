@@ -40,7 +40,7 @@ st.markdown("""
 
 st.session_state["errors"] = []
 
-df = pd.read_csv("Data/wildfire_boreal_forest.csv")
+df = pd.read_csv("data/wildfire_boreal_forest.csv")
 df = df[df['year']>2015].reset_index()
 df = df[df['gee_coordinates'].notnull()].reset_index()
 df = df.sort_values(['name']).reset_index(drop=True)
