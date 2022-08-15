@@ -40,7 +40,7 @@ with graph1:
     for i in range(6):
         st.write("")
     
-    image = Image.open('images/Toolbar.png')
+    image = Image.open('images\Toolbar.png')
     st.image(image, caption=None, width=1000, use_column_width=500, clamp=False, channels="RGB", output_format="auto")
     
 with text1:
