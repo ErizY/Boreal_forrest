@@ -40,7 +40,7 @@ with graph1:
     for i in range(6):
         st.write("")
     
-    image = Image.open('images\Toolbar.png')
+    image = Image.open('images/Toolbar.png')
     st.image(image, caption=None, width=1000, use_column_width=500, clamp=False, channels="RGB", output_format="auto")
     
 with text1:
@@ -73,7 +73,7 @@ with text2:
     st.markdown("""<div style="text-align: center">Test each tool on the graph to get a feel of how each tool works on the visulisation displayed</div>""",
     unsafe_allow_html=True)
 
-video_file = open('images/tool_working.mp4','rb')
+video_file = open('images/Tool_working.mp4','rb')
 video_bytes = video_file.read()
 st.video(video_bytes)
 st.caption("Here is an example of how the tool works, In this example you can see me selecting a fire from the dataset, changing the layer to LST which is land surface tempreature and also selecting a date range, Air quality only works from data from 2017 onwards")
