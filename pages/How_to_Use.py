@@ -25,7 +25,7 @@ components.html(
             How to use the Tool</h1>"""
         )
 
-components.html("""<p style="color:#ffff; text-align:center; font-family: Arial; ">This is our first proof of concept prototype and is still in development. If you have any feedback, thoughts, bugs email us at studio@alan-mcfetridge.com and we'd be happy to help!.</p>
+components.html("""<p style="color:#ffff; text-align:center; font-family: Arial; ">This is our first version of the tool and there is many more updates to come!. If you have any feedback, thoughts, bugs email us at studio@alan-mcfetridge.com and we'd be happy to help!.</p>
 </p>
 """)
 
