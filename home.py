@@ -40,15 +40,16 @@ with col2:
 <title>Text Example</title>
 <style>
 div.container {
+
 }
-div.container p {
+div.container{
 font-family: Arial;
 font-style: normal;
 font-weight: normal;
 text-decoration: none;
 text-transform: none;
 
-}
+
 </style>
 
 <div class="container">
@@ -56,9 +57,16 @@ text-transform: none;
 <p></p>
 <p>This tool provides an open-source exploration of the Boreal & Taiga to scan about and consider our relationship with the forest, which many of us benefit from in terms of air quality yet seldom see in our daily lives. We hope with this tool, you will be able to connect with it.</p>
 <p></p>
+<p>- The boreal forest is the worlds largest biome on planet earth!</p>
+<p></p>
+<p>-The forest zone consists of 8 countries which include: Canada,China,Finland,Japan,Russia,Norway,Sweden and the United States.It also covers some costal areas of Iceland, areas of Northern Kazakhstan, Estonia and the Scottish Highlands</p>
+<p></p>
+<p>-The Forest covers 17 million square kilometres (6.6 million square miles) or 11.5% of the earths land</p>
+<p></p>
+<p>-The largest areas of the forest are in Canada and Russia</p>
+<p></p>
+<p>-The fire season in the Boreal forest typically lasts from May to October with peaks of activity between July and August</p>
 </div>
-	
-    
     
     
     """, unsafe_allow_html=True)
@@ -72,11 +80,38 @@ text-transform: none;
     
 
     st.markdown("""
-            <dl style="color:#ffff;  font-family: Arial; ">
-            <dd style="color:#ffff;  font-family: Arial; s">This website was created by Eriz Yusuf and Mohammed Mazy under Alan McFetrdige Photography, 
-            The purpose of this website is to Show the scale of the Boreal Forest and help users understand what happens in this particular biome, this website is an informative website that is used to inform users of fires happening in and around the Boreal. This is still a work in progress so some data may not be avaliable and some features may not work as expected
-            The data was taken from Various sources please see <a href="https://pastebin.com/1aHFFYy5">Boreal Forest Fires <a/> Sattleite imagery was taken From Nasa and the European space agency using Google earth engine</dd>
-            </dl>
+<!DOCTYPE html>
+<title>Text Example</title>
+<style>
+div.container {
+
+}
+div.container  {
+font-family: Arial;
+font-style: normal;
+font-weight: normal;
+text-decoration: none;
+text-transform: none;
+
+
+</style>
+
+<div class="container">
+<p>This website was created by Eriz Yusuf and Mohammed Mazy under Alan McFetrdige Photography, The purpose of this website is to Show the scale of the Boreal Forest and help users understand what happens in this particular biome, this website is an informative website that is used to inform users of fires happening in and around the Boreal.  </p>
+<p></p>
+<p>-The Satellite data was provided by Nasa and ESA using the Google Earth Engine environment</p>
+<p>-we gathered our information from <a href="https://pastebin.com/1aHFFYy5">Boreal Fires</a></p>
+<p></p>
+<p><strong>Satellites used in the tool Currently:</strong></p>
+<p></p>
+<p>Sentinel 2 - This satellite  has a resolution of 10m/pixel , it scans an area for 10 days at a time  so when exploring please consider that some areas may be missing or it will overlap.
+try to use 2-4 day cycles for example the horse river fire began back in may 2016 so you could do the 2nd-4th of may and then see the results</p>
+<p></p>
+<p>LANDSAT 8 (LST) - This is the Temperature sensor which generates the heat-map , it cycles over 16 day cycles so you would need to have a larger date range selected 16-30 days works fine! </p>
+<p></p>
+<p>Sentinel 5p  - This is the Air quality sensory satellite currently we have Carbon Monoxide and Nitrogen Dioxide , Air Quality layer unavailable before 2017-11-13 it cycles over 14 days so 14+ days work fine!</p>
+<p></p>
+</div>
 
 
            
