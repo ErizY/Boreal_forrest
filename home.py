@@ -11,7 +11,7 @@ import streamlit.components.v1 as components
 st.set_page_config(
     page_title="HOME",
     page_icon="	🏠",
-    layout="wide"
+    layout="centered"
 )
 
 
@@ -48,7 +48,7 @@ Canada,China,Finland,Japan,Russia,Norway,Sweden and the United States. It also c
 
   
 
-    
+    st.markdown('---')
 
     components.html("""<h3 style="text-align: center; font: Arial; color:#33ff33; font-size:50px; ">About this website</h3>""",
     )
