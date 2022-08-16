@@ -1,3 +1,4 @@
+from pickle import TRUE
 import geemap.foliumap as geemap
 import ee
 import streamlit as st
@@ -21,13 +22,31 @@ AirQuality_yearSpan = pd.read_csv('Data/Year_spanDF.csv')
 
  
 components.html(
-            """<h1 style="color:#33ff33; font-size:50px;text-align:center">
+            """<h1 style="color:#33ff33; font-size:50px;text-align:center; font-family:"Times New Roman";">
             How to use the Tool</h1>"""
         )
 
-components.html("""<p style="color:#ffff; text-align:center; font-family: Arial; ">This is our first version of the tool and there is many more updates to come!. If you have any feedback, thoughts, bugs email us at studio@alan-mcfetridge.com and we'd be happy to help!.</p>
-</p>
-""")
+st.markdown("""<!-- HTML Codes by Quackit.com -->
+<!DOCTYPE html>
+<title>Text Example</title>
+<style>
+div.container {
+
+}
+div.container p {
+font-family: Times;
+font-style: normal;
+font-weight: normal;
+text-decoration: none;
+text-transform: none;
+
+
+</style>
+
+<div class="container">
+<p>This is our first version of the tool and there is many more updates to come!. If you have any feedback, thoughts, bugs email us at studio@alan-mcfetridge.com and we'd be happy to help!</p>
+</div>
+""", unsafe_allow_html=True)
 
 
 
@@ -45,15 +64,34 @@ with graph1:
     
 with text1:
     st.markdown("""
-	-Camera Icon: Clicking this icon allows you to download a PNG of the graph selected(***If you use this tool please creadit us!***)
+	
+<!DOCTYPE html>
+<title>Text Example</title>
+<style>
+div.container {
 
-	-Magnifine glass: This tool allows you to select a specific area on the charts and zoom into it(**Note:** ***This only works on Bar charts and line graphs***)
+}
+div.container p {
+font-family: Times;
+font-style: normal;
+font-weight: normal;
+text-decoration: none;
+text-transform: none;
 
-	-Box: This tool allows you to zoom in and out of the graph
 
-	-Plus and Minus: This allows you to zoom in and out of the graph
+</style>
 
-	-House: If you make a mistake or zoom in too far this tool allows you to reset axis to default""")
+<div class="container">
+<p>-Camera Icon: Clicking this icon allows you to download a PNG of the graph selected(<strong>If you use this tool please creadit us!</strong>)</p>
+<p></p>
+<p>-Magnifine glass: This tool allows you to select a specific area on the charts and zoom into it(<strong>Note:</strong>This only works on Bar charts and line graphs)</p>
+<p></p>
+<p>-Box: This tool allows you to zoom in and out of the graph</p>
+<p></p>
+<p>-Plus and Minus: This allows you to zoom in and out of the graph</p>
+<p></p>
+<p>-House: If you make a mistake or zoom in too far this tool allows you to reset axis to default</p>
+</div>""", unsafe_allow_html=True)
     
 
 
@@ -70,7 +108,26 @@ with text2:
     for i in range(12):
         st.write("")
     
-    st.markdown("""<div style="text-align: center">Test each tool on the graph to get a feel of how each tool works on the visulisation displayed</div>""",
+    st.markdown("""
+<!DOCTYPE html>
+<title>Text Example</title>
+<style>
+div.container {
+
+}
+div.container p {
+font-family: Times;
+font-style: normal;
+font-weight: normal;
+text-decoration: none;
+text-transform: none;
+
+
+</style>
+
+<div class="container">
+<p>Test each tool on the graph to get a feel of how each tool works on the visualisation displayed</p>
+</div>""",
     unsafe_allow_html=True)
 
 video_file = open('images/Tool_working.mp4','rb')

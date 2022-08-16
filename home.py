@@ -27,8 +27,8 @@ col1, col2, col3 = st.columns([10,30,10])
 
 
 with col2:
-    image = Image.open('images/Boreal.png')
-    st.image(image, caption="The Scale of the Boreal Forest", output_format="auto", use_column_width='always')
+    image = Image.open('images/Boreal.jpg')
+    st.image(image, caption="The Scale of the Boreal Forest - Created by Alan Mcfetridge, Eriz Yusuf, Mohammed Mazy, ESA", output_format="auto", use_column_width='always')
 
     
 
@@ -129,7 +129,7 @@ button_1, button_2 = st.columns([1,1])
 
 
 with button_1:
-    if st.button("Continue to Boreal_Exploration"):
+    if st.button("Continue to Boreal Exploration"):
         st.markdown(
             '<meta http-equiv="refresh" content="0;url=/Boreal_Exploration">', unsafe_allow_html=True)
 

@@ -53,13 +53,13 @@ layers_choices = {"True Color": "true", "Air Quality (Nitrogen Dioxide)": "no2",
 
 
 components.html(
-    """<h1 style="color:#33ff33; font-size:50px; text-align:center">
+    """<h1 style="color:#33ff33; font-size:50px; text-align:center font:"Times New Roman"">
             Visualising Boreal Fires</h1>"""
 )
 
 with st.sidebar:
     components.html(
-    """<p style="color:#33ff33; font-size:40px; text-align:center">
+    """<p style="color:#33ff33; font-size:40px; text-align:center font:"Times New Roman"">
             Explore available satellite datasets</p>""")
 
     fire = st.selectbox("Choose a fire", fires_choices)
