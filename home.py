@@ -35,7 +35,7 @@ with col2:
     components.html("""
         <Ul style="text-align:center; color:#ffff; font-family: Arial; ">
         <li>The boreal forest is the worlds largest biome on planet earth! The forest zone consists of 8 countries:
-         Canada,China,Finland,Japan,Russia,Norway,Sweden and the United States. It also coveres some costal areas of Iceland,areas of Northern Kazakhstan, Estonia and the Scottish Highlands</li>
+Canada,China,Finland,Japan,Russia,Norway,Sweden and the United States. It also coveres some costal areas of Iceland,areas of Northern Kazakhstan, Estonia and the Scottish Highlands</li>
             
         <li> The Forest covers 17 million square kilometers (6.6 million square miles) or 11.5% of the earths land</li>
 
@@ -48,7 +48,7 @@ with col2:
 
   
 
-    st.markdown('---')
+    
 
     components.html("""<h3 style="text-align: center; font: Arial; color:#33ff33; font-size:50px; ">About this website</h3>""",
     )
@@ -56,13 +56,11 @@ with col2:
     st.markdown('###')
     
     components.html("""
-            <p style="color:#ffff;  font-family: Arial;">
-            This website was created by Eriz Yusuf and Mohammed Mazy under Alan McFetrdige Photography, 
+            <dl style="color:#ffff;  font-family: Arial;">
+            <dd style="color:#ffff;  font-family: Arial;">This website was created by Eriz Yusuf and Mohammed Mazy under Alan McFetrdige Photography, 
             The purpose of this website is to Show the scale of the Boreal Forest and help users understand what happens in this particular biome, this website is an informative website that is used to inform users of fires happening in and around the Boreal. This is still a work in progress so some data may not be avaliable and some features may not work as expected
-
-            The data was taken from Various sources please see <a href="https://pastebin.com/1aHFFYy5">Boreal Forest Fires<a/>
-
-            Sattleite imagery was taken From Nasa and the European space agency using Google earth engine"</p>
+            The data was taken from Various sources please see <a href="https://pastebin.com/1aHFFYy5">Boreal Forest Fires <a/> Sattleite imagery was taken From Nasa and the European space agency using Google earth engine</dd>
+            </dl>
 
 
            
