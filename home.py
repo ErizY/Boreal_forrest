@@ -92,17 +92,7 @@ st.markdown('###')
 st.markdown('###')
 st.markdown('###')
 button_1, button_2 = st.columns([1,1])
-st.markdown('###')
-st.markdown('###')
-st.markdown('###')
-st.markdown('###')
-st.markdown('###')
-st.markdown('###')
-st.markdown('###')
-st.markdown('###')
-st.markdown('###')
-st.markdown('###')
-st.markdown('###')
+
 
 with button_1:
     if st.button("Continue to Boreal_Exploration"):
