@@ -28,27 +28,35 @@ col1, col2, col3 = st.columns([10,30,10])
 
 with col2:
     image = Image.open('images/Boreal.png')
-    st.image(image, caption="The Scale of the Boreal Forest", output_format="auto")
+    st.image(image, caption="The Scale of the Boreal Forest", output_format="auto", use_column_width='always')
 
     
 
 
 
 
-    st.markdown("""<dl style="color:#ffff;  font-family: Arial;>
-Fire behaviour is changing worldwide, which is directly related to the planet's heating by human-caused climate change.
- 
-So, we asked what this means for the planet's most inhospitable, enormous and life giving forest - the Boreal/Taiga. It takes up the entire top of Earth, is rich with animal and plant diversity and, due to the harsh winters, is sparsely populated by people.
+    st.markdown("""
+<!DOCTYPE html>
+<title>Text Example</title>
+<style>
+div.container {
+}
+div.container p {
+font-family: Arial;
+font-style: normal;
+font-weight: normal;
+text-decoration: none;
+text-transform: none;
 
+}
+</style>
 
-As fire activity is linked to dryness, we look at the Boreal/Taiga Forest to consider the history of Earth greatest remaining forest 
-
-Making this exploration with Big Data to view Landscape Fire began as a desire to communicate the scale of the boreal forest and its role within the Earth System. We began asking questions about the transition from the historical fire regime in its primary regenerative capacity into the potential for the large parts of the forest to collapse from worsening fire and what impact that would have on the neighbouring systems such as the Gulf Stream or Artic Ice Shelf. Also, although fire is often reported in the Amazon, Australia, East Coast America and part of south and central Europe, fires activity in Boreal/Tiaga is seldom reported unless it comes into contact with a township, which was the case for Fort McMurray in 2016 and more recently in Lytton 2021 and 2022.
-
-In the context of an accelerated transitioning out of the Holocene climate into something unknown, Fire imagery is now prevalent in news media, acting as a terrifying symbol of the threshold that has been crossed. Far from accepting this as a new normal, we have created this open-source platform for public use and your questions and independent exploration.
-
-
-“The IPCC report says the future is going to be hotter - how hot, as the New York Times says, is up to us”. - Nov 28, 2021, Pyrocologist Professor David Bowman. </dl>
+<div class="container">
+<p>Fire behaviour is changing worldwide. In general terms, landscape fires are occurring more often and becoming more severe. Being directly related to the planet's heating by human-caused climate change, we asked what this means for the planet's most inhospitable, enormous and life-giving forest - the Boreal/Taiga. The world's largest land biome makes its way around the entire top of Earth as a giant ring shape. Therefore it connects people from Europe, Asia and North America. It is rich with animal and plant diversity and, due to the harsh winters, is sparsely populated by people.</p>
+<p></p>
+<p>This tool provides an open-source exploration of the Boreal & Taiga to scan about and consider our relationship with the forest, which many of us benefit from in terms of air quality yet seldom see in our daily lives. We hope with this tool, you will be able to connect with it.</p>
+<p></p>
+</div>
 	
     
     
