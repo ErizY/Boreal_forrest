@@ -1,3 +1,4 @@
+from turtle import width
 import geemap.foliumap as geemap
 import ee
 import streamlit as st
@@ -11,14 +12,16 @@ import streamlit.components.v1 as components
 st.set_page_config(
     page_title="HOME",
     page_icon="	🏠",
-    layout="wide"
+    layout="wide",
 )
+
 
 components.html("""
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 """
+
 )
 with open('style.css') as f:
     st.markdown(f'<style>{f.read()}</style>', unsafe_allow_html=True)
@@ -38,16 +41,14 @@ with col2:
 
     
     components.html("""
-        <Ul style="text-align:center; color:#ffff; font-family: Arial; ">
-        <li>The boreal forest is the worlds largest biome on planet earth! The forest zone consists of 8 countries:
-Canada,China,Finland,Japan,Russia,Norway,Sweden and the United States. It also coveres some costal areas of Iceland,areas of Northern Kazakhstan, Estonia and the Scottish Highlands</li>
-            
-        <li> The Forest covers 17 million square kilometers (6.6 million square miles) or 11.5% of the earths land</li>
+    <ul style="color:#ffff;  font-family: Arial;">
+	<li>The boreal forest is the worlds largest biome on planet earth!</li>
+    <li>The forest zone consists of 8 countries which include:Canada,China,Finland,Japan,Russia,Norway,Sweden and the United States.It also covers some costal areas of Iceland, areas of Northern Kazakhstan, Estonia and the Scottish Highlands</li>
+	<li>The Forest covers 17 million square kilometres (6.6 million square miles) or 11.5% of the earths land</li>
+	<li>The largest areas of the forest are in Canada and Russia</li>
+	<li>The fire season in the Boreal forest typically lasts from May to October with peaks of activity between July and August</li>
+</ul>
 
-        <li>The largest areas of the forest are in Canda and Russia</li>
-
-        <li> The fire season in the Boreal forest typically lasts from May to October with peaks of activity between July and August</li>
-        </ul>
 """)
 
 
