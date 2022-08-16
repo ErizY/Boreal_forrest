@@ -60,7 +60,15 @@ with col2:
     )
     
     st.markdown('###')
-    
+    st.markdown('###')
+    st.markdown('###')
+    st.markdown('###')
+    st.markdown('###')
+    st.markdown('###')
+    st.markdown('###')
+    st.markdown('###')
+    st.markdown('###')
+    st.markdown('###')
     components.html("""
             <dl style="color:#ffff;  font-family: Arial;">
             <dd style="color:#ffff;  font-family: Arial;">This website was created by Eriz Yusuf and Mohammed Mazy under Alan McFetrdige Photography, 
@@ -72,8 +80,29 @@ with col2:
            
 
             """)
-
+st.markdown('###')
+st.markdown('###')
+st.markdown('###')
+st.markdown('###')
+st.markdown('###')
+st.markdown('###')
+st.markdown('###')
+st.markdown('###')
+st.markdown('###')
+st.markdown('###')
+st.markdown('###')
 button_1, button_2 = st.columns([1,1])
+st.markdown('###')
+st.markdown('###')
+st.markdown('###')
+st.markdown('###')
+st.markdown('###')
+st.markdown('###')
+st.markdown('###')
+st.markdown('###')
+st.markdown('###')
+st.markdown('###')
+st.markdown('###')
 
 with button_1:
     if st.button("Continue to Boreal_Exploration"):
