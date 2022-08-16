@@ -1,4 +1,4 @@
-from turtle import width
+
 import geemap.foliumap as geemap
 import ee
 import streamlit as st
