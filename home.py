@@ -54,9 +54,9 @@ with col2:
 
   
 
-    
 
-    components.html("""<h3 style="text-align: center; line-height:100px font: Arial; color:#33ff33; font-size:50px; ">About this website</h3>""",
+
+    components.html("""<h3 style="text-align: center; line-height:100px font: Arial; color:#33ff33; font-size:50px; ">About this website</h3>"""
     )
     
 
