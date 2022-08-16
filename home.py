@@ -21,7 +21,7 @@ header = st.container()
 body = st.container()
 footer = st.container()
 
-components.html("""<h1 style="text-align: center; color:#33ff33; font-size:50px; ">Exploring the Boreal Forest through satellite data</h1>"""
+components.html("""<h1 style="text-align: center; color:#33ff33; font-size:50px; font:"Times New Roman"; ">Exploring the Boreal Forest through satellite data</h1>"""
 )
 col1, col2, col3 = st.columns([10,30,10])
 
@@ -43,7 +43,7 @@ div.container {
 
 }
 div.container{
-font-family: Arial;
+font-family: "Times New Roman";
 font-style: normal;
 font-weight: normal;
 text-decoration: none;
@@ -75,7 +75,7 @@ text-transform: none;
 
 
 
-    components.html("""<h3 style="text-align: center; line-height:100px font: Arial; color:#33ff33; font-size:50px; ">About this website</h3>"""
+    components.html("""<h3 style="text-align: center; color:#33ff33; font-size:50px; font:"Times New Roman" ">About this website</h3>"""
     )
     
 
@@ -87,7 +87,7 @@ div.container {
 
 }
 div.container  {
-font-family: Arial;
+font-family: "Times New Roman";
 font-style: normal;
 font-weight: normal;
 text-decoration: none;
@@ -100,7 +100,7 @@ text-transform: none;
 <p>This website was created by Eriz Yusuf and Mohammed Mazy under Alan McFetrdige Photography, The purpose of this website is to Show the scale of the Boreal Forest and help users understand what happens in this particular biome, this website is an informative website that is used to inform users of fires happening in and around the Boreal.  </p>
 <p></p>
 <p>-The Satellite data was provided by Nasa and ESA using the Google Earth Engine environment</p>
-<p>-we gathered our information from <a href="https://pastebin.com/1aHFFYy5">Boreal Fires</a></p>
+<p>-We gathered our information from <a href="https://pastebin.com/1aHFFYy5">Boreal Fires</a></p>
 <p></p>
 <p><strong>Satellites used in the tool Currently:</strong></p>
 <p></p>
