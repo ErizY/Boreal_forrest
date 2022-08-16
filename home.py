@@ -21,7 +21,7 @@ header = st.container()
 body = st.container()
 footer = st.container()
 
-components.html("""<h1 style="text-align: center; color:#33ff33; font-size:50px; font:"Times New Roman"; ">Exploring the Boreal Forest through satellite data</h1>"""
+components.html("""<h1 style="text-align: center; color:#24851A; font-size:50px; font:"Times New Roman"; ">Exploring the Boreal Forest through Satellite Data</h1>"""
 )
 col1, col2, col3 = st.columns([10,30,10])
 
@@ -75,7 +75,7 @@ text-transform: none;
 
 
 
-    components.html("""<h3 style="text-align: center; color:#33ff33; font-size:50px; font:"Times New Roman" ">About this website</h3>"""
+    components.html("""<h3 style="text-align: center; color:#24851A; font-size:50px; font:"Times New Roman" ">About this Website</h3>"""
     )
     
 
@@ -87,7 +87,7 @@ div.container {
 
 }
 div.container  {
-font-family: "Times New Roman";
+font-family: "Times";
 font-style: normal;
 font-weight: normal;
 text-decoration: none;

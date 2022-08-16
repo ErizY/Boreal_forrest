@@ -22,7 +22,7 @@ AirQuality_yearSpan = pd.read_csv('Data/Year_spanDF.csv')
 
  
 components.html(
-            """<h1 style="color:#33ff33; font-size:50px;text-align:center; font-family:"Times New Roman";">
+            """<h1 style="color:#5BF1A1; font-size:50px;text-align:center; font-family:"Times New Roman";">
             How to use the Tool</h1>"""
         )
 
