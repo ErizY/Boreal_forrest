@@ -28,7 +28,7 @@ col1, col2, col3 = st.columns([10,30,10])
 
 with col2:
     image = Image.open('images/Boreal.png')
-    st.image(image, caption="The Scale of the Boreal Forest", width=1000, use_column_width=1000, clamp=False, channels="RGB", output_format="auto")
+    st.image(image, caption="The Scale of the Boreal Forest", output_format="auto")
 
     
 
