@@ -85,7 +85,7 @@ text-transform: none;
 <p>- Camera Icon: Clicking this icon allows you to download a PNG of the graph selected (<strong>If you use this tool please credit us!</strong>)
 </p>
 <p></p>
-<p>- Magnifying glass: This tool allows you to select a specific area on the charts and zoom into it (<strong>Note:This only works on bar charts and line graphs</strong>)
+<p>- Magnifying Glass: This tool allows you to select a specific area on the charts and zoom into it (<strong>Note:This only works on bar charts and line graphs</strong>)
 </p>
 <p></p>
 <p>- Box:This tool allows you to zoom in and out of the graph</p>
