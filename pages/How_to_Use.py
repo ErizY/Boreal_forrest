@@ -136,6 +136,16 @@ video_file = open('images/Tool_working.mp4','rb')
 video_bytes = video_file.read()
 st.video(video_bytes)
 st.caption("Here is an example of how the tool works, In this example you can see me selecting a fire from the dataset, changing the layer to LST which is land surface tempreature and also selecting a date range, Air quality only works from data from 2017 onwards")
-if st.button("Back to Home"):
-    st.markdown('<meta http-equiv="refresh" content="0;url=/home">',
+
+
+Button_1, button_2= st.columns([1,1])
+
+
+with Button_1:
+    if st.button("Back to Home"):
+        st.markdown('<meta http-equiv="refresh" content="0;url=/home">',
                 unsafe_allow_html=True)
+
+with button_2:
+    link = '[Back to Website](https://alan-mcfetridge.com)'
+    st.markdown(link, unsafe_allow_html=True)

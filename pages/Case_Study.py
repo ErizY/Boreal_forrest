@@ -78,8 +78,7 @@ st.write(line3)
 st.caption("This Graph shows the air quality levels from Fort Mcmurray from April 2016-June 2021")
 
 
-button_1, button_2,button_3 = st.columns([1,1,1])
-
+button_1, button_2,button_3,button_4 = st.columns([1,1,1,1])
 
 with button_1:
     if st.button("Continue to How to Use"):
@@ -98,3 +97,7 @@ with button_3:
     if st.button("Back to boreal Exploration"):
         st.markdown(
             '<meta http-equiv="refresh" content="0;url=/Boreal_Exploration">', unsafe_allow_html=True)
+
+with button_4:
+        link = '[Back to Website](https://alan-mcfetridge.com)'
+        st.markdown(link, unsafe_allow_html=True)

@@ -123,7 +123,7 @@ st.markdown('###')
 
 
 
-button_1, button_2,button_3 = st.columns([1,1,1])
+button_1, button_2,button_3,button_4 = st.columns([1,1,1,1])
 
 
 with button_1:
@@ -144,3 +144,6 @@ with button_3:
         st.markdown(
             '<meta http-equiv="refresh" content="0;url=/How_to_Use">', unsafe_allow_html=True)
 
+with button_4:
+    link = '[Back to Website](https://alan-mcfetridge.com)'
+    st.markdown(link, unsafe_allow_html=True)

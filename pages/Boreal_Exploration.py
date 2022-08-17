@@ -226,7 +226,7 @@ try to use 2-4 day cycles for example the horse river fire began back in may 201
             )
 
 
-button_1, button_2,button_3 = st.columns([1,1,1])
+button_1, button_2,button_3,button_4 = st.columns([1,1,1,1])
 
 
 with button_1:
@@ -246,3 +246,7 @@ with button_3:
     if st.button("Back to Home"):
         st.markdown(
             '<meta http-equiv="refresh" content="0;url=/">', unsafe_allow_html=True)
+
+with button_4:
+    link = '[Back to Website](https://alan-mcfetridge.com)'
+    st.markdown(link, unsafe_allow_html=True)
