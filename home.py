@@ -55,9 +55,14 @@ text-transform: none;
 </style>
 
 <div class="container">
-<p>Fire behaviour is changing worldwide. In general terms, landscape fires are occurring more often and becoming more severe. Being directly related to the planet's heating by human-caused climate change, we asked what this means for the planet's most inhospitable, enormous and life-giving forest - the Boreal/Taiga. The world's largest land biome makes its way around the entire top of Earth as a giant ring shape. Therefore it connects people from Europe, Asia and North America. It is rich with animal and plant diversity and, due to the harsh winters, is sparsely populated by people.</p>
+<p>Hello and welcome. We have made this open-source exploration of the Boreal & Taiga to develop an interest in how fire lives on the landscape and with people. This was created to spread awareness of the ongoing issues caused by the global heating crisis.
+</p>
 <p></p>
-<p>This tool provides an open-source exploration of the Boreal & Taiga to scan about and consider our relationship with the forest, which many of us benefit from in terms of air quality yet seldom see in our daily lives. We hope with this tool, you will be able to connect with it.</p>
+<p>We discovered that despite the forest's size and vital role in climate stability, few people know this. We felt that it would be great to bring some attention to fire activity and began writing code to enable free public exploration.
+</p>
+<p>Consider this vast region of life-giving ultimate beauty. Up north lays 11.5% of the Earth's surface, working away naturally all year around while we sleep. It makes me think of our lungs, yet it is also much like our heart and blood, moving and circulating without any thought or direction from us. When we consider the variety of unseen inter-relationships from air quality to commercial wood and oil in our daily lives, we hope with this tool, you will be able to connect with the source.</p>
+<p>In the background of this exploration into an earthly wonderland is the seriousness of accelerated human-caused climate change. The IPCC Chair stated in June 2022, "We are not on track to achieve a climate-resilient sustainable world.” There is much work to do, and we hope this project can positively impact essential social and political change.</p>
+
 <p></p>
 <hr class="solid">
 <h4 style="text-align: center; font-family:Times;color:#24851A;">5 Facts About The Boreal/Taiga Forest</h4>
