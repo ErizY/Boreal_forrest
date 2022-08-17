@@ -62,15 +62,15 @@ text-transform: none;
 <hr class="solid">
 <h4 style="text-align: center; font-family:Times;color:#24851A;">5 Facts About The Boreal Forest</h4>
 
-<p>- The forest zone consists of 8 countries which include: Canada, China, Finland, Japan, Russia, Norway, Sweden and the United States. It also covers some costal areas of Iceland, areas of Northern Kazakhstan, Estonia and the Scottish Highlands</p>
+<p>- The forest zone consists of 8 countries which include: Canada, China, Finland, Japan, Russia, Norway, Sweden and the United States. It also covers some costal areas of Iceland, areas of Northern Kazakhstan, Estonia and the Scottish Highlands.</p>
 <p></p>
-<p>- Canada has 28% of the worlds Boreal Zone which acumilates to 552 million hectares</p>
+<p>- Canada has 28% of the worlds Boreal Zone which acumilates to 552 million hectares.</p>
 <p></p>
-<p>- The Forest covers 17 million square kilometres (6.6 million square miles) or 11.5% of the earths land</p>
+<p>- The Forest covers 17 million square kilometres (6.6 million square miles) or 11.5% of the earths land.</p>
 <p></p>
-<p>- The largest areas of the forest are in Canada and Russia</p>
+<p>- The largest areas of the forest are in Canada and Russia.</p>
 <p></p>
-<p>- The fire season in the Boreal forest typically lasts from May to October with peaks of activity between July and August. During this time 2 million hectares of of the forest burns</p>
+<p>- The fire season in the Boreal forest typically lasts from May to October with peaks of activity between July and August. Approximately  2 million hectares  of the forest burns at this time.</p>
 </div>
     
     
