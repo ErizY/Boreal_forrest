@@ -178,7 +178,52 @@ if "fire_name" in st.session_state:
                     {"Area Hectares burnt:" + area_hectares + "ha"}</p>""",
                 unsafe_allow_html=True,
             )   
+st.markdown('***') 
 
+components.html("""<h3 style="text-align: center; color:#24851A; font-size:50px; font:"Times New Roman" ">About this Tool</h3>"""
+    )
+st.markdown('***') 
+    
+st.markdown("""
+<!DOCTYPE html>
+<title>Text Example</title>
+<style>
+div.container {
+
+}
+div.container  {
+font-family: "Times";
+font-style: normal;
+font-weight: normal;
+text-decoration: none;
+text-transform: none;
+
+
+</style>
+
+<div class="container">
+<p>This Tool was created by Eriz Yusuf and Mohammed Mazy under Alan McFetrdige Photography. This was created with intention to spread awarness of the ongoing issues caused by the global warming crisis</p>
+<p> This tool is used to make it aware that there are ongoing fires throughout the boreal forest on a seasonaly basis</p>
+<p></p>
+<p>-The Satellite data was provided by Nasa and ESA using the Google Earth Engine environment</p>
+<p>-We gathered our information from <a href="https://pastebin.com/1aHFFYy5">Boreal Fires</a></p>
+<p></p>
+<p><strong>Satellites used in the tool Currently:</strong></p>
+<p></p>
+<p>Sentinel 2 - This satellite  has a resolution of 10m/pixel , it scans an area for 10 days at a time  so when exploring please consider that some areas may be missing or it will overlap.
+try to use 2-4 day cycles for example the horse river fire began back in may 2016 so you could do the 2nd-4th of may and then see the results</p>
+<p></p>
+<p>LANDSAT 8 (LST) - This is the Temperature sensor which generates the heat-map , it cycles over 16 day cycles so you would need to have a larger date range selected 16-30 days works fine! </p>
+<p></p>
+<p>Sentinel 5p  - This is the Air quality sensory satellite currently we have Carbon Monoxide and Nitrogen Dioxide , Air Quality layer unavailable before 2017-11-13 it cycles over 14 days so 14+ days work fine!</p>
+<p></p>
+</div>
+
+
+           
+
+            """, unsafe_allow_html=True
+            )
 if st.button("Continue to how to use"):
     st.markdown('<meta http-equiv="refresh" content="0;url=/How_to_Use">',
                 unsafe_allow_html=True)
