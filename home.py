@@ -70,7 +70,7 @@ text-transform: none;
 <p></p>
 <p>- The largest areas of the forest are in Canada and Russia.</p>
 <p></p>
-<p>- The fire season in the Boreal forest typically lasts from May to October with peaks of activity between July and August. Approximately  2 million hectares  of the forest burns at this time.</p>
+<p>- The fire season typically lasts from May to October with peaks of activity between July and August. Approximately 2 million hectares of the Canadian forest region burns at this time.</p>
 </div>
     
     
