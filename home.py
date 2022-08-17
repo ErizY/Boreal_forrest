@@ -64,7 +64,7 @@ text-transform: none;
 
 <p>- The forest zone consists of 8 countries which include: Canada, China, Finland, Japan, Russia, Norway, Sweden and the United States. It also covers some costal areas of Iceland, areas of Northern Kazakhstan, Estonia and the Scottish Highlands.</p>
 <p></p>
-<p>- Canada has 28% of the worlds Boreal Zone which acumilates to 552 million hectares.</p>
+<p>- Canada has 28% of the worlds Boreal/Taiga Zone which conists of 552 million hectares.</p>
 <p></p>
 <p>- The Forest covers 17 million square kilometres (6.6 million square miles) or 11.5% of the earths land.</p>
 <p></p>
