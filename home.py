@@ -23,6 +23,8 @@ footer = st.container()
 
 components.html("""<h1 style="text-align: center; color:#24851A; font-size:50px; font:"Times New Roman"; ">Exploring the Boreal Forest through Satellite Data</h1>"""
 )
+
+st.markdown('***') 
 col1, col2, col3 = st.columns([10,30,10])
 
 
@@ -57,11 +59,12 @@ text-transform: none;
 <p></p>
 <p>This tool provides an open-source exploration of the Boreal & Taiga to scan about and consider our relationship with the forest, which many of us benefit from in terms of air quality yet seldom see in our daily lives. We hope with this tool, you will be able to connect with it.</p>
 <p></p>
+<hr class="solid">
 <h4 style="text-align: center; font-family:Times;color:#24851A;">5 Facts About The Boreal Forest</h4>
 
-<p>- The boreal forest is the worlds largest biome on planet earth!</p>
+<p>- The forest zone consists of 8 countries which include: Canada, China, Finland, Japan, Russia, Norway, Sweden and the United States. It also covers some costal areas of Iceland, areas of Northern Kazakhstan, Estonia and the Scottish Highlands</p>
 <p></p>
-<p>-The forest zone consists of 8 countries which include: Canada,China,Finland,Japan,Russia,Norway,Sweden and the United States.It also covers some costal areas of Iceland, areas of Northern Kazakhstan, Estonia and the Scottish Highlands</p>
+<p>- Canada has 28% of the worlds Boreal Zone which acumilates to 552 million hectares</p>
 <p></p>
 <p>-The Forest covers 17 million square kilometres (6.6 million square miles) or 11.5% of the earths land</p>
 <p></p>
@@ -75,9 +78,9 @@ text-transform: none;
     
   
 
+    st.markdown('***') 
 
-
-    components.html("""<h3 style="text-align: center; color:#24851A; font-size:50px; font:"Times New Roman" ">About this Website</h3>"""
+    components.html("""<h3 style="text-align: center; color:#24851A; font-size:50px; font:"Times New Roman" ">About this Tool</h3>"""
     )
     
 
@@ -99,7 +102,8 @@ text-transform: none;
 </style>
 
 <div class="container">
-<p>This website was created by Eriz Yusuf and Mohammed Mazy under Alan McFetrdige Photography, The purpose of this website is to Show the scale of the Boreal Forest and help users understand what happens in this particular biome, this website is an informative website that is used to inform users of fires happening in and around the Boreal.  </p>
+<p>This Tool was created by Eriz Yusuf and Mohammed Mazy under Alan McFetrdige Photography. This was created with intention to spread awarness of the ongoing issues caused by the global warming crisis</p>
+<p> This tool is used to make it aware that there are ongoing fires throughout the boreal forest on a seasonaly basis</p>
 <p></p>
 <p>-The Satellite data was provided by Nasa and ESA using the Google Earth Engine environment</p>
 <p>-We gathered our information from <a href="https://pastebin.com/1aHFFYy5">Boreal Fires</a></p>

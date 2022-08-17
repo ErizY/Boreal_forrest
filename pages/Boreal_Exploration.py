@@ -56,7 +56,7 @@ components.html(
     """<h1 style="color:#24851A; font-size:50px; text-align:center font:"Times";">
             Visualising Boreal Fires</h1>"""
 )
-
+st.markdown('***') 
 with st.sidebar:
     components.html(
     """<p style="color:#24851A; font-size:40px; text-align:center font:"Times New Roman"">
