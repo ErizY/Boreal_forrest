@@ -30,8 +30,12 @@ components.html(
             """<h1 style="color:#24851A; font-size:50px;text-align:center; font-family:"Times New Roman";">
             Case Study of Air Quality</h1>"""
         )
+
+
 col1, col2, col3 = st.columns([10,30,10])
-st.markdown("""
+
+with col2:
+    st.markdown("""
 
 
 <!DOCTYPE html>
@@ -49,10 +53,10 @@ p {font-family:Times, serif;font-size:14px;font-style:normal;font-weight:normal;
 <body>
 <h2 style="color:#24851A;text-align:center; font-family:"Times New Roman";">Key words</h2>
 <p></p>
-<p style = "text-align:center;">PM - Particulate matter contains microscopic solids or liquid droplets that are so small that they can be inhaled and cause serious health problems.</p>
-<p style = "text-align:center;">NO2  - Nitrogen Dioxide</p>
-<p style = "text-align:center;">SO2 - Sulphur Dioxide</p>
-<p style = "text-align:center;">CO - Carbon Monoxide</p>
+<p>PM - Particulate matter contains microscopic solids or liquid droplets that are so small that they can be inhaled and cause serious health problems.</p>
+<p>NO2  - Nitrogen Dioxide</p>
+<p>SO2 - Sulphur Dioxide</p>
+<p>CO - Carbon Monoxide</p>
 <p></p>
 </body>
 </html>
