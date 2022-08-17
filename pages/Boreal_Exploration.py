@@ -53,7 +53,7 @@ layers_choices = {"True Color": "true", "Air Quality (Nitrogen Dioxide)": "no2",
 
 
 components.html(
-    """<h1 style="color:#5BF1A1; font-size:50px; text-align:center font:"Times New Roman"">
+    """<h1 style="color:#5BF1A1; font-size:50px; text-align:center font:"Times";">
             Visualising Boreal Fires</h1>"""
 )
 
