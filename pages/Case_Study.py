@@ -31,17 +31,44 @@ components.html(
             Case Study of Air quality</h1>"""
         )
 
+st.markdown("""
 
-line1 = px.line(AirQuality_monthspan, x='date', y=AirQuality_monthspan.columns[1:5])
+
+<!DOCTYPE html>
+<html>
+<head>
+<!-- HTML Codes by Quackit.com -->
+<title>
+</title>
+<style>
+body {background-repeat:no-repeat;background-position:top left;background-attachment:fixed;}
+h2{font-family:Times,serif;color#24851A;}
+p {font-family:Times, serif;font-size:14px;font-style:normal;font-weight:normal;}
+</style>
+</head>
+<body>
+<h2 style="color:#24851A;text-align:center; font-family:"Times New Roman";">Key words</h2>
+<p></p>
+<p>PM - Particulate matter contains microscopic solids or liquid droplets that are so small that they can be inhaled and cause serious health problems.</p>
+<p>NO2  - Nitrogen Dioxide</p>
+<p>SO2 - Sulphur Dioxide</p>
+<p>CO - Carbon Monoxide</p>
+<p></p>
+</body>
+</html>
+
+
+""",unsafe_allow_html=True)
+line1 = px.line(AirQuality_monthspan, x='date', y=AirQuality_monthspan.columns[1:6])
 st.write(line1)
-st.caption("This Graph shows the Air quality levels From Fort Mcmurray in the month of May 2016, Carbon Monoxide,Particulate matter and Nitrogen Dioxide")
+st.caption("This Graph shows the Air quality levels From Fort Mcmurray in the month of May 2016,Particulate matter and Nitrogen Dioxide,Sulphur Dioxide and Carbon Monoxide")
 
-line2 = px.line(AirQuality_before_and_after, x='date',y=AirQuality_before_and_after.columns[1:5])
+line2 = px.line(AirQuality_before_and_after, x='date',y=AirQuality_before_and_after.columns[1:6])
 st.write(line2)
 st.caption("This Graph shows the Air quality levels From Fort Mcmurray in the month of April 2016-May 2016, to show the correlation of before and after the fire")
 
 
-line3 = px.line(AirQuality_yearSpan, x='date',y=AirQuality_yearSpan.columns[1:5])
+line3 = px.line(AirQuality_yearSpan, x='date',y=AirQuality_yearSpan.columns[1:6])
 st.write(line3)
 st.caption("This Graph shows the Air quality levels From Fort Mcmurray from April 2016-June 2021")
 
