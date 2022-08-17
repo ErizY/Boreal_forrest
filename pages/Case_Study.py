@@ -28,7 +28,7 @@ AirQuality_yearSpan = pd.read_csv('Data/Year_spanDF.csv')
 
 components.html(
             """<h1 style="color:#24851A; font-size:50px;text-align:center; font-family:"Times New Roman";">
-            Case Study of Air quality</h1>"""
+            Case Study of Air Quality</h1>"""
         )
 col1, col2, col3 = st.columns([10,30,10])
 st.markdown("""
@@ -61,16 +61,16 @@ p {font-family:Times, serif;font-size:14px;font-style:normal;font-weight:normal;
 """,unsafe_allow_html=True)
 line1 = px.line(AirQuality_monthspan, x='date', y=AirQuality_monthspan.columns[1:6])
 st.write(line1)
-st.caption("This Graph shows the Air quality levels From Fort Mcmurray in the month of May 2016,Particulate matter and Nitrogen Dioxide,Sulphur Dioxide and Carbon Monoxide")
+st.caption("This graph shows the air quality levels from Fort Mcmurray in the month of May 2016, Particulate matter and Nitrogen Dioxide ,Sulphur Dioxide and Carbon Monoxide")
 
 line2 = px.line(AirQuality_before_and_after, x='date',y=AirQuality_before_and_after.columns[1:6])
 st.write(line2)
-st.caption("This Graph shows the Air quality levels From Fort Mcmurray in the month of April 2016-May 2016, to show the correlation of before and after the fire")
+st.caption("This graph shows the air quality levels From Fort Mcmurray in the month of April 2016-May 2016, to show the correlation of before and after the fire")
 
 
 line3 = px.line(AirQuality_yearSpan, x='date',y=AirQuality_yearSpan.columns[1:6])
 st.write(line3)
-st.caption("This Graph shows the Air quality levels From Fort Mcmurray from April 2016-June 2021")
+st.caption("This Graph shows the air quality levels from Fort Mcmurray from April 2016-June 2021")
 
 
 button_1, button_2,button_3 = st.columns([1,1,1])
