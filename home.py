@@ -30,7 +30,7 @@ col1, col2, col3 = st.columns([10,30,10])
 
 with col2:
     image = Image.open('images/Boreal.jpg')
-    st.image(image, caption="The Scale of the Boreal Forest - Created by Alan Mcfetridge, Eriz Yusuf, Mohammed Mazy, ESA", output_format="auto", use_column_width='always')
+    st.image(image, caption="The Scale of the Boreal Forest - Prototype Boreal Map was created by Alan McFetridge, Eriz Yusuf, Mohammed Mazy, European Space Agency and the Centre of Ecological Philosophy. © 2022.", output_format="auto", use_column_width='always')
 
     
 
@@ -82,8 +82,8 @@ text-transform: none;
 
     components.html("""<h3 style="text-align: center; color:#24851A; font-size:50px; font:"Times New Roman" ">About this Tool</h3>"""
     )
+    st.markdown('***') 
     
-
     st.markdown("""
 <!DOCTYPE html>
 <title>Text Example</title>
@@ -124,6 +124,7 @@ try to use 2-4 day cycles for example the horse river fire began back in may 201
 
             """, unsafe_allow_html=True
             )
+
 st.markdown('###')
 st.markdown('###')
 st.markdown('###')
