@@ -22,7 +22,7 @@ AirQuality_yearSpan = pd.read_csv('Data/Year_spanDF.csv')
 
  
 components.html(
-            """<h1 style="color:#5BF1A1; font-size:50px;text-align:center; font-family:"Times New Roman";">
+            """<h1 style="color:#24851A; font-size:50px;text-align:center; font-family:"Times New Roman";">
             How to use the Tool</h1>"""
         )
 
@@ -60,7 +60,7 @@ with graph1:
         st.write("")
     
     image = Image.open('images/Toolbar.png')
-    st.image(image, caption=None, width=1000, use_column_width=500, clamp=False, channels="RGB", output_format="auto")
+    st.image(image, caption=None, width=500, use_column_width=250, clamp=False, channels="RGB", output_format="auto")
     
 with text1:
     st.markdown("""
