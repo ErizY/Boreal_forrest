@@ -35,6 +35,7 @@ components.html(
 col1, col2, col3 = st.columns([10,30,10])
 
 with col2:
+    st.markdown("The data for this case Study was provided by Alberta State in Canada. In this section there are a series of graphs which show the various different values of air quality in and around Fort Mcmurray during the year of 2016. This was known as the Horse River fire")
     st.markdown("""
 
 
@@ -53,7 +54,7 @@ p {font-family:Times, serif;font-size:14px;font-style:normal;font-weight:normal;
 <body>
 <h2 style="color:#24851A;text-align:center; font-family:"Times New Roman";">Key words</h2>
 <p></p>
-<p>PM - Particulate matter contains microscopic solids or liquid droplets that are so small that they can be inhaled and cause serious health problems.</p>
+<p>PM - Particulate Matter contains microscopic solids or liquid droplets that are so small that they can be inhaled and cause serious health problems.</p>
 <p>NO2  - Nitrogen Dioxide</p>
 <p>SO2 - Sulphur Dioxide</p>
 <p>CO - Carbon Monoxide</p>
@@ -65,7 +66,7 @@ p {font-family:Times, serif;font-size:14px;font-style:normal;font-weight:normal;
 """,unsafe_allow_html=True)
 line1 = px.line(AirQuality_monthspan, x='date', y=AirQuality_monthspan.columns[1:6])
 st.write(line1)
-st.caption("This graph shows the air quality levels from Fort Mcmurray in the month of May 2016, Particulate matter and Nitrogen Dioxide ,Sulphur Dioxide and Carbon Monoxide")
+st.caption("This Graph shows the air quality levels from Fort Mcmurray in the month of May 2016, Particulate Matter,Nitrogen Dioxide, Sulphur Dioxide and Carbon Monoxide")
 
 line2 = px.line(AirQuality_before_and_after, x='date',y=AirQuality_before_and_after.columns[1:6])
 st.write(line2)

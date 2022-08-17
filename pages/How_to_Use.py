@@ -101,9 +101,9 @@ text-transform: none;
 
 with graph2:
 
-    line1 = px.line(AirQuality_monthspan, x='date', y=AirQuality_monthspan.columns[1:5])
+    line1 = px.line(AirQuality_monthspan, x='date', y=AirQuality_monthspan.columns[1:6])
     st.write(line1)
-    st.caption("This Graph shows the Air quality levels From Fort Mcmurray in the month of May 2016, Carbon Monoxide,Particulate matter and Nitrogen Dioxide")    
+    st.caption("This Graph shows the air quality levels from Fort Mcmurray in the month of May 2016, Particulate Matter,Nitrogen Dioxide, Sulphur Dioxide and Carbon Monoxide")    
 
 with text2:
 
