@@ -88,13 +88,20 @@ st.markdown('###')
 st.markdown('###')
 st.markdown('###')
 
-button_1, button_2 = st.columns([1,1])
+button_1, button_2,button3 = st.columns([1,1,1])
 
 
 with button_1:
     if st.button("Continue to Boreal Exploration"):
         st.markdown(
             '<meta http-equiv="refresh" content="0;url=/Boreal_Exploration">', unsafe_allow_html=True)
+
+
+
+with button3:
+        if st.button("Case Study of Air quality"):
+            st.markdown(
+            '<meta http-equiv="refresh" content="0;url=/Case_Study">', unsafe_allow_html=True)
 
 
 with button_2:

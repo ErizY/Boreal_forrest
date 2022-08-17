@@ -226,16 +226,23 @@ try to use 2-4 day cycles for example the horse river fire began back in may 201
             )
 
 
-button_1, button_2 = st.columns([1,1])
+button_1, button_2,button_3 = st.columns([1,1,1])
+
 
 with button_1:
-    if st.button("Continue to how to use"):
-        st.markdown('<meta http-equiv="refresh" content="0;url=/How_to_Use">',
-                unsafe_allow_html=True)
+    if st.button("Continue to Case Study"):
+        st.markdown(
+            '<meta http-equiv="refresh" content="0;url=/Case_Study">', unsafe_allow_html=True)
 
 
 
 with button_2:
+        if st.button("How to use"):
+            st.markdown(
+            '<meta http-equiv="refresh" content="0;url=/How_to_Use">', unsafe_allow_html=True)
+
+
+with button_3:
     if st.button("Back to Home"):
-        st.markdown('<meta http-equiv="refresh" content="0;url=/home">',
-                unsafe_allow_html=True)
+        st.markdown(
+            '<meta http-equiv="refresh" content="0;url=/">', unsafe_allow_html=True)
