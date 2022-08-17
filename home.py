@@ -106,7 +106,7 @@ p {font-family:Times;;font-style:normal;font-weight:normal;}
 <p></p>
 <p>We would like to acknowledge all historical, present and future peoples of the Boreal/Taiga. To recognise the value of critical infrastructures such as air, fire, water, plants, and animals, which are our greatest allies in balancing human-caused climate change. This critical infrastructure predates invasive human laws and technology with its ensuing resource exploitation and climate change. That much of this land is Unceded Territory. We ask for your support to progress this exploration under cultural guidance because we aim to create an inclusive platform where Indigenous stakeholders' knowledge is expressed without translation by the Centre of Ecological Philosophy.</p>
 <p></p>
-<p>The project is possible because of data made freely available by NASA and the European Space Agency. We would like to thank Thomas Lanning and  Mukesh Bhatt for their guidance and expertise in big data, space technology and cultural awareness.</p>
+<p>The project is possible because of data from NASA and the European Space Agency. We would like to thank Thomas Lanning for his expertise in working with big data sets, Mukesh Bhatt for his guidance with space technology, law and cultural awareness and Jessica Waal for walking through the design and development process.</p>
 <p></p>
 </body>
 </html>
