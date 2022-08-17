@@ -57,6 +57,8 @@ text-transform: none;
 <p></p>
 <p>This tool provides an open-source exploration of the Boreal & Taiga to scan about and consider our relationship with the forest, which many of us benefit from in terms of air quality yet seldom see in our daily lives. We hope with this tool, you will be able to connect with it.</p>
 <p></p>
+<h4 style="text-align: center; font-family:Times;color:#24851A;">5 Facts About The Boreal Forest</h4>
+
 <p>- The boreal forest is the worlds largest biome on planet earth!</p>
 <p></p>
 <p>-The forest zone consists of 8 countries which include: Canada,China,Finland,Japan,Russia,Norway,Sweden and the United States.It also covers some costal areas of Iceland, areas of Northern Kazakhstan, Estonia and the Scottish Highlands</p>
