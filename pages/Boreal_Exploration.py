@@ -15,8 +15,7 @@ import numpy as np
 import streamlit.components.v1 as components
 
 st.set_page_config(
-    page_title="Page 2 ",
-    page_icon="👋",
+    page_title=" Visualising Boreal Fires",
     layout="wide"
 )
 
