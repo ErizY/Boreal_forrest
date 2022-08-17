@@ -96,12 +96,12 @@ text-transform: none;
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
 body {background-color:#ffffff;background-repeat:no-repeat;background-position:top left;background-attachment:fixed;}
-h3{font-family:Times;color:#24851A;}
+h4{font-family:Times;color:#24851A;}
 p {font-family:Times;;font-style:normal;font-weight:normal;}
 </style>
 </head>
 <body>
-<h3 style = "text-align: center;">Acknowledgements:</h3>
+<h4 style = "text-align: center;">Acknowledgements</h4>
 <p></p>
 <p></p>
 <p>We would like to acknowledge all historical, present and future peoples of the Boreal/Taiga. To recognise the value of critical infrastructures such as air, fire, water, plants, and animals, which are our greatest allies in balancing human-caused climate change. This critical infrastructure predates invasive human laws and technology with its ensuing resource exploitation and climate change. That much of this land is Unceded Territory. We ask for your support to progress this exploration under cultural guidance because we aim to create an inclusive platform where Indigenous stakeholders' knowledge is expressed without translation by the Centre of Ecological Philosophy.</p>
