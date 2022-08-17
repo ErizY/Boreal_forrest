@@ -82,15 +82,17 @@ text-transform: none;
 </style>
 
 <div class="container">
-<p>-Camera Icon: Clicking this icon allows you to download a PNG of the graph selected(<strong>If you use this tool please creadit us!</strong>)</p>
+<p>- Camera Icon: Clicking this icon allows you to download a PNG of the graph selected (<strong>If you use this tool please credit us!</strong>)
+</p>
 <p></p>
-<p>-Magnifine glass: This tool allows you to select a specific area on the charts and zoom into it(<strong>Note:</strong>This only works on Bar charts and line graphs)</p>
+<p>- Magnifying glass: This tool allows you to select a specific area on the charts and zoom into it (<strong>Note:This only works on bar charts and line graphs</strong>)
+</p>
 <p></p>
-<p>-Box: This tool allows you to zoom in and out of the graph</p>
+<p>- Box:This tool allows you to zoom in and out of the graph</p>
 <p></p>
-<p>-Plus and Minus: This allows you to zoom in and out of the graph</p>
+<p>- Plus and Minus: This allows you to zoom in and out of the graph</p>
 <p></p>
-<p>-House: If you make a mistake or zoom in too far this tool allows you to reset axis to default</p>
+<p>- House: If you make a mistake or zoom in too far this tool allows you to reset axis to default</p>
 </div>""", unsafe_allow_html=True)
     
 
