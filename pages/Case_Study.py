@@ -36,14 +36,13 @@ line1 = px.line(AirQuality_monthspan, x='date', y=AirQuality_monthspan.columns[1
 st.write(line1)
 st.caption("This Graph shows the Air quality levels From Fort Mcmurray in the month of May 2016, Carbon Monoxide,Particulate matter and Nitrogen Dioxide")
 
-line2 = px.line(AirQuality_monthspan, x='date', y=AirQuality_before_and_after[1:5])
+line2 = px.line(AirQuality_before_and_after, x='date',y=AirQuality_before_and_after.columns[1:5])
 st.write(line2)
-st.caption("This Graph shows the Air quality levels From Fort Mcmurray in the month of May 2016, Carbon Monoxide,Particulate matter and Nitrogen Dioxide")
-
-line3 = px.line(AirQuality_monthspan, x='date', y=AirQuality_yearSpan[1:5])
-st.write(line2)
-st.caption("This Graph shows the Air quality levels From Fort Mcmurray in the month of May 2016, Carbon Monoxide,Particulate matter and Nitrogen Dioxide")
+st.caption("This Graph shows the Air quality levels From Fort Mcmurray in the month of April 2016-May 2016, to show the correlation of before and after the fire")
 
 
+line3 = px.line(AirQuality_yearSpan, x='date',y=AirQuality_yearSpan.columns[1:5])
+st.write(line3)
+st.caption("This Graph shows the Air quality levels From Fort Mcmurray from April 2016-June 2021")
 
 

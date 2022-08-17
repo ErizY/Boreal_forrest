@@ -224,9 +224,18 @@ try to use 2-4 day cycles for example the horse river fire began back in may 201
 
             """, unsafe_allow_html=True
             )
-if st.button("Continue to how to use"):
-    st.markdown('<meta http-equiv="refresh" content="0;url=/How_to_Use">',
+
+
+button_1, button_2 = st.columns([1,1])
+
+with button_1:
+    if st.button("Continue to how to use"):
+        st.markdown('<meta http-equiv="refresh" content="0;url=/How_to_Use">',
                 unsafe_allow_html=True)
-if st.button("Back to Home"):
-    st.markdown('<meta http-equiv="refresh" content="0;url=/home">',
+
+
+
+with button_2:
+    if st.button("Back to Home"):
+        st.markdown('<meta http-equiv="refresh" content="0;url=/home">',
                 unsafe_allow_html=True)
