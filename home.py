@@ -76,16 +76,21 @@ text-transform: none;
 <p>- The largest areas of the forest are in Canada and Russia.</p>
 <p></p>
 <p>- The fire season typically lasts from May to October with peaks of activity between July and August. Approximately 2 million hectares of the Canadian forest region burns at this time.</p>
+<p></p>
+<h4 style="text-align: center; font-family:Times;color:#24851A;">Ask Us a Question</h4>
+<p>If you have experience of living in the region, of fire or have any questions about our research, please email us at: studio@alan-mcfetridge.com </p>
+<p></p>
+
 </div>
 
 
-    
+
     """, unsafe_allow_html=True)
    
-    st.markdown(""""<!DOCTYPE html>
+    st.markdown("""<!DOCTYPE html>
 <html>
 <head>
-<!-- HTML Codes by Quackit.com -->
+
 <title>
 </title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
