@@ -53,13 +53,13 @@ layers_choices = {"True Color": "true", "Air Quality (Nitrogen Dioxide)": "no2",
 
 
 components.html(
-    """<h1 style="color:#24851A; font-size:50px; text-align:center font:"Times";">
+    """<h1 style="color:#24851A; font-size:50px; text-align:center; font:"Times";">
             Visualising Boreal Fires</h1>"""
 )
 st.markdown('***') 
 with st.sidebar:
     components.html(
-    """<p style="color:#24851A; font-size:40px; text-align:center font:"Times New Roman"">
+    """<p style="color:#24851A; font-size:40px;text-align:center; font:"Times New Roman"">
             Explore available satellite datasets</p>""")
 
     fire = st.selectbox("Choose a fire", fires_choices)
@@ -178,12 +178,12 @@ if "fire_name" in st.session_state:
                     {"Area Hectares burnt:" + area_hectares + "ha"}</p>""",
                 unsafe_allow_html=True,
             )   
-st.markdown('***') 
 
-components.html("""<h3 style="text-align: center; color:#24851A; font-size:50px; font:"Times New Roman" ">About this Tool</h3>"""
-    )
-st.markdown('***') 
-    
+
+
+
+
+  
 st.markdown("""
 <!DOCTYPE html>
 <title>Text Example</title>
@@ -202,6 +202,7 @@ text-transform: none;
 </style>
 
 <div class="container">
+<h2 style=text-align:center;color:#24851A; font:"Times New Roman";">About this Tool</h2>
 <p>This Tool was created by Eriz Yusuf and Mohammed Mazy under Alan McFetrdige Photography. This was created with intention to spread awarness of the ongoing issues caused by the global warming crisis</p>
 <p> This tool is used to make it aware that there are ongoing fires throughout the boreal forest on a seasonaly basis</p>
 <p></p>
