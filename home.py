@@ -134,13 +134,13 @@ with button_1:
 
 
 with button_2:
-        if st.button("Case Study of Air quality"):
+        if st.button("Case Study of Air Quality"):
             st.markdown(
             '<meta http-equiv="refresh" content="0;url=/Case_Study">', unsafe_allow_html=True)
 
 
 with button_3:
-    if st.button("How to use "):
+    if st.button("How to Use "):
         st.markdown(
             '<meta http-equiv="refresh" content="0;url=/How_to_Use">', unsafe_allow_html=True)
 

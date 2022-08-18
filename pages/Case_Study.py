@@ -35,8 +35,33 @@ components.html(
 col1, col2, col3 = st.columns([10,30,10])
 
 with col2:
-    st.markdown("The data for this case Study was provided by Alberta State in Canada. In this section there are a series of graphs which show the various different values of air quality in and around Fort Mcmurray during the year of 2016. This was known as the Horse River fire")
-    st.markdown("""
+    st.markdown("""<!DOCTYPE html>
+<html>
+<head>
+<!-- HTML Codes by Quackit.com -->
+<title>
+</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {background-repeat:no-repeat;background-position:top left;background-attachment:fixed;}
+
+p {font-family:Times;font-style:normal;font-weight:normal;}
+</style>
+</head>
+<body>
+<h1></h1>
+<p>Here we draw attention to additional data from the 2016 Fort McMurray Fire (FMMF), which is the subject of the Centre of Ecological Philosophy's <a href="https://alan-mcfetridge.com/#/on-the-line/">first book </a> and <a href="https://alan-mcfetridge.com/#/song-of-the-dead/"> upcoming monograph </a>. The Air Quality Data is intriguing and alarming. In contrast, the photography reveals the stillness of the aftermath and the silence after a sudden change. But here, atmospheric data adds dimension to show how truly explosive the rising energy became. 
+     </p>
+<p></p>
+<p>Alberta State in Canada provided the data for this case study. This section shows a series of graphs with air quality values in and around Fort McMurray during 2016.  
+</p>
+<p></p>
+</body>
+</html>
+
+""", unsafe_allow_html=True)
+with st.sidebar:
+        st.markdown("""
 
 
 <!DOCTYPE html>
@@ -52,7 +77,7 @@ p {font-family:Times, serif;font-size:14px;font-style:normal;font-weight:normal;
 </style>
 </head>
 <body>
-<h2 style="color:#24851A;text-align:center; font-family:"Times New Roman";">Key words</h2>
+<h2 style="color:#24851A;text-align:center; font-family:"Times New Roman";">Key</h2>
 <p></p>
 <p>PM - Particulate Matter contains microscopic solids or liquid droplets that are so small that they can be inhaled and cause serious health problems.</p>
 <p>NO2  - Nitrogen Dioxide</p>
@@ -67,6 +92,28 @@ p {font-family:Times, serif;font-size:14px;font-style:normal;font-weight:normal;
 line1 = px.line(AirQuality_monthspan, x='date', y=AirQuality_monthspan.columns[1:6])
 st.write(line1)
 st.caption("This Graph shows the air quality levels from Fort Mcmurray in the month of May 2016, Particulate Matter,Nitrogen Dioxide, Sulphur Dioxide and Carbon Monoxide")
+
+st.markdown("""
+<!DOCTYPE html>
+<html>
+<head>
+<title>
+</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {background-repeat:no-repeat;background-position:top left;background-attachment:fixed;}
+h1{font-family:Arial, sans-serif;}
+p {font-family:Times, font-style:normal;font-weight:normal}
+</style>
+</head>
+<body>
+<h1></h1>
+<p>The FMMF was a PyroCb or Pyrocumulonimbus Fire Storm. Up until the 1980s PyroCb’s were rare. However, in the past 40 years, they have begun to occur frequently on Earth. The FMMF case study shows a fundamental change in extreme fire behaviour and another reason why this fire registers as a significant turning point. </p>
+</body>
+</html>
+
+
+""" ,unsafe_allow_html=True)
 
 line2 = px.line(AirQuality_before_and_after, x='date',y=AirQuality_before_and_after.columns[1:6])
 st.write(line2)
@@ -88,7 +135,7 @@ with button_1:
 
 
 with button_2:
-        if st.button("Back to home"):
+        if st.button("Back to Home"):
             st.markdown(
             '<meta http-equiv="refresh" content="0;url=/">', unsafe_allow_html=True)
 
