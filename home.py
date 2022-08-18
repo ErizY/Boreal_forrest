@@ -145,5 +145,29 @@ with button_3:
             '<meta http-equiv="refresh" content="0;url=/How_to_Use">', unsafe_allow_html=True)
 
 with button_4:
-    link = '[Back to Website](https://alan-mcfetridge.com)'
-    st.markdown(link, unsafe_allow_html=True)
+        st.markdown("""
+      <!DOCTYPE HTML>
+<html lang="en">
+<head>
+ <style>
+  a:link,a:visited {
+   color: Blue;
+   background-color: https://alan-mcfetridge.com/cep;
+   text-decoration: none;
+   target-new: none;
+  }
+  a:hover {
+   color: #0000FF;
+   background-color: #FFFFC0;
+   text-decoration: underline;
+   target-new: none;
+  }
+ </style>
+</head>
+<body>
+ <!-- Text link tag - by www.rapidtables.com -->
+ <a href="https://alan-mcfetridge.com/cep">Return Centre for Ecological Philosophy</a>
+</body>
+</html>
+        
+        """, unsafe_allow_html=True)
