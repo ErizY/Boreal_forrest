@@ -101,7 +101,7 @@ st.markdown("""
 </title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
-body {background-repeat:no-repeat;background-position:top left;background-attachment:fixed;}
+body {background-repeat:no-repeat;background-position:top left;background-attachment:fixed; text-align: center;}
 h1{font-family:Arial, sans-serif;}
 p {font-family:Times, font-style:normal;font-weight:normal}
 </style>
@@ -132,7 +132,7 @@ st.markdown("""
 </title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
-body {;background-repeat:no-repeat;background-position:top left;background-attachment:fixed;}
+body {;background-repeat:no-repeat;background-position:top left;background-attachment:fixed; text-align: center;}
 p {font-family:Times;font-style:normal;font-weight:normal;}
 </style>
 </head>
