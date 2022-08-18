@@ -225,7 +225,11 @@ try to use 2-4 day cycles for example the horse river fire began back in may 201
             """, unsafe_allow_html=True
             )
 
-
+st.markdown('##')
+st.markdown('##')
+st.markdown('##')
+st.markdown('##')
+st.markdown('##')
 button_1, button_2,button_3,button_4 = st.columns([1,1,1,1])
 
 
