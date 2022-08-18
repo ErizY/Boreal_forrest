@@ -144,6 +144,12 @@ video_bytes = video_file.read()
 st.video(video_bytes)
 st.caption("Here is an example of how the tool works, In this example you can see me selecting a fire from the dataset, changing the layer to LST which is land surface tempreature and also selecting a date range, Air quality only works from data from 2017 onwards")
 
+st.markdown('###')
+st.markdown('###')
+st.markdown('###')
+st.markdown('###')
+st.markdown('###')
+st.markdown('###')
 
 Button_1, button_2= st.columns([1,1])
 

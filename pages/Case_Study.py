@@ -73,7 +73,7 @@ with st.sidebar:
 <style>
 body {background-repeat:no-repeat;background-position:top left;background-attachment:fixed;}
 h2{font-family:Times,serif;color#24851A;}
-p {font-family:Times, serif;font-size:14px;font-style:normal;font-weight:normal;}
+p {font-family:Times;font-style:normal;font-weight:normal;}
 </style>
 </head>
 <body>
@@ -179,7 +179,7 @@ with button_2:
 
 
 with button_3:
-    if st.button("Back to boreal Exploration"):
+    if st.button("Back to Boreal Exploration"):
         st.markdown(
             '<meta http-equiv="refresh" content="0;url=/Boreal_Exploration">', unsafe_allow_html=True)
 
