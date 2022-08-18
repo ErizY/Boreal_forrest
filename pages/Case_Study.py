@@ -185,7 +185,7 @@ with button_3:
 
 with button_4:
         st.markdown("""
-        <!DOCTYPE HTML>
+      <!DOCTYPE HTML>
 <html lang="en">
 <head>
  <style>
@@ -194,20 +194,18 @@ with button_4:
    background-color: https://alan-mcfetridge.com/cep;
    text-decoration: none;
    target-new: none;
-
   }
   a:hover {
-   color: https://alan-mcfetridge.com/cep;
-   background-color: https://alan-mcfetridge.com/cep;
+   color: #0000FF;
+   background-color: #FFFFC0;
    text-decoration: underline;
    target-new: none;
-
   }
  </style>
 </head>
 <body>
  <!-- Text link tag - by www.rapidtables.com -->
- <a href="https://alan-mcfetridge.com/cep">Return to the Centre for Ecological Philosophy</a>
+ <a href="https://alan-mcfetridge.com/cep">Return Centre for Ecological Philosophy</a>
 </body>
 </html>
         
