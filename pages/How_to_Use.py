@@ -57,10 +57,11 @@ graph2,text2 = st.columns(2)
 graph3,text3 = st.columns(2)
 with graph1:
     for i in range(6):
-        st.write("")
-    
+      st.write("")
+ 
+       
     image = Image.open('images/Toolbar.png')
-    st.image(image, caption=None, width=500, use_column_width=250, clamp=False, channels="RGB", output_format="auto")
+    st.image(image, caption=None, width=300, use_column_width=250, clamp=False, channels="RGB", output_format="auto")
     
 with text1:
     st.markdown("""
