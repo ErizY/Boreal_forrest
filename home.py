@@ -78,7 +78,7 @@ text-transform: none;
 <p>- The fire season typically lasts from May to October with peaks of activity between July and August. Approximately 2 million hectares of the Canadian forest region burns at this time.</p>
 <p></p>
 <h4 style="text-align: center; font-family:Times;color:#24851A;">Ask Us a Question</h4>
-<p>If you have experience of living in the region, of fire or have any questions about our research, please email us at: studio@alan-mcfetridge.com </p>
+<p>If you have experience of living in the region, of fire or have any questions about our research, please contact us  at our :<a href= "https://alan-mcfetridge.com/contact"> Contact Us Page </a> </p>
 <p></p>
 
 </div>
