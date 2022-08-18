@@ -44,7 +44,13 @@ text-transform: none;
 </style>
 
 <div class="container">
-<p>This is our first version of the tool and there is many more updates to come!. If you have any feedback, thoughts, bugs email us at studio@alan-mcfetridge.com and we'd be happy to help!</p>
+<p>Thank you for viewing our project, which is version 1.0. We started from scratch, and there is much more we would love to do. 
+We have planned updates and releases for 2.0 with more features and functions. If you would like to help us carry on developing this tool and building an audience for eco-critical matters, please become involved by joining our <a href="https://www.patreon.com/Centre_for_Ecological_Philosophy">Patreon program<a/>. 
+</p>
+<p></p>
+<p> If you have any feedback, thoughts, or find any bugs please go to our contact page here: <a href = "https://alan-mcfetridge.com/contact"> Contact Us</a></p>
+
+
 </div>
 """, unsafe_allow_html=True)
 
