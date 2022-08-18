@@ -202,11 +202,12 @@ text-transform: none;
 
 <div class="container">
 <h2 style=text-align:center;color:#24851A; font:"Times New Roman";">About this Tool</h2>
-<p>This Tool was created by Eriz Yusuf and Mohammed Mazy under Alan McFetrdige Photography. This was created with intention to spread awarness of the ongoing issues caused by the global warming crisis</p>
-<p> This tool is used to make it aware that there are ongoing fires throughout the boreal forest on a seasonaly basis</p>
+<p>This Tool was created by Eriz Yusuf and Mohammed Mazy under Alan McFetridge Photography and The Centre for Ecological Philosophy. Our intention is to spread awareness of the ongoing issues caused by the global warming crisis.
+</p>
+<p>Please use this tool to explore the Boreal/Taiga landscape to observe ongoing fires and burn scars throughout the biome seasonally.</p>
 <p></p>
 <p>-The Satellite data was provided by Nasa and ESA using the Google Earth Engine environment</p>
-<p>-We gathered our information from <a href="https://pastebin.com/1aHFFYy5">Boreal Fires</a></p>
+<p>-We gathered our information from the sources found here: <a href="https://pastebin.com/1aHFFYy5">Boreal Fires</a></p>
 <p></p>
 <p><strong>Satellites used in the tool Currently:</strong></p>
 <p></p>
