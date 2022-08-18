@@ -23,10 +23,10 @@ AirQuality_yearSpan = pd.read_csv('Data/Year_spanDF.csv')
  
 components.html(
             """<h1 style="color:#24851A; font-size:50px;text-align:center; font-family:"Times New Roman";">
-            How to use the Tool</h1>"""
+            How to Use the Tool</h1>"""
         )
 
-st.markdown("""<!-- HTML Codes by Quackit.com -->
+st.markdown(""">
 <!DOCTYPE html>
 <title>Text Example</title>
 <style>

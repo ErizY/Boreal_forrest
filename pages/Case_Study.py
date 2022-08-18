@@ -166,7 +166,7 @@ st.markdown('##')
 button_1, button_2,button_3,button_4 = st.columns([1,1,1,1])
 
 with button_1:
-    if st.button("Continue to How to Use"):
+    if st.button("Continue to How to Use the Tool"):
         st.markdown(
             '<meta http-equiv="refresh" content="0;url=/How_to_Use">', unsafe_allow_html=True)
 

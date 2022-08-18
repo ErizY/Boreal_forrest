@@ -140,7 +140,7 @@ with button_2:
 
 
 with button_3:
-    if st.button("How to Use "):
+    if st.button("How to Use the Tool"):
         st.markdown(
             '<meta http-equiv="refresh" content="0;url=/How_to_Use">', unsafe_allow_html=True)
 
